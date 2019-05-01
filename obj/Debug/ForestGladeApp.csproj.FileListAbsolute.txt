@@ -1,0 +1,15 @@
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\ForestGladeApp.exe.config
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\ForestGladeApp.exe
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\ForestGladeApp.pdb
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.Dashboard.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.EntryForm.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Properties.Resources.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csproj.GenerateResource.cache
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csproj.CoreCompileInputs.cache
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.exe
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.pdb
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.CntrlService.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.CntrlUser.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.OrderCalendar.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.CntrlServiceList.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csprojAssemblyReference.cache
