@@ -16,6 +16,7 @@ namespace ForestGladeApp.Forms
     {
         private List<Panel> servicePanels;
         private bool edit;
+        private string connectionString = @"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True";
         public CntrlService(string permission)
         {
             _permission = permission;
@@ -40,6 +41,10 @@ namespace ForestGladeApp.Forms
         private string _permission;
         private int _availableAmount;
         private int _criticalAmount;
+        private string _description;
+
+
+
 
         public int StanKrytyczny
         {
@@ -51,7 +56,7 @@ namespace ForestGladeApp.Forms
         public int StanProduktu
         {
             get { return _availableAmount; }
-            set { _availableAmount = value; cntrlServiceAvailableAmount.Text = value.ToString(); }
+            set { _availableAmount = value; }
         }
 
 
@@ -68,12 +73,24 @@ namespace ForestGladeApp.Forms
             set { _id = value; }
         }
 
+        public string Kategoria
+        {
+            get { return _category; }
+            set { _category = value; }
+        }
 
         [Category("Custom Props")]
         public Color Kolor
         {
             get { return _backgroundColor; }
-            set { _backgroundColor = value; cntrlPnlServiceView.BackColor = value; }
+            set { _backgroundColor = value; cntrlServicePnlBackground.BackColor = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Opis
+        {
+            get { return _description; }
+            set { _description = value; cntrlServiceLblDescription.Text = value; }
         }
 
 
@@ -92,14 +109,6 @@ namespace ForestGladeApp.Forms
             set { _name = value; cntrlServiceLblName.Text = value; }
         }
 
-
-        [Category("Custom Props")]
-        public string Kategoria
-        {
-            get { return _category; }
-            set { _category = value; cntrlServiceLblCategory.Text = value; }
-        }
-
         #endregion
 
         private void btnEditService_Click(object sender, EventArgs e)
@@ -108,10 +117,10 @@ namespace ForestGladeApp.Forms
             servicePanels[GetCurrentPanel()].BringToFront();
             if(edit == true)
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    var command = @"SELECT Name, Category, Unit, Prize, AvailableDiscount, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id ='" + this._id + "'";
+                    var command = @"SELECT Name, Description, Category, Unit, Prize, AvailableDiscount, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id ='" + this._id + "'";
                     SqlDataAdapter adapter = new SqlDataAdapter(command, connection);
                     DataTable dataTable = new DataTable();
                     connection.Close();
@@ -120,12 +129,13 @@ namespace ForestGladeApp.Forms
                     {
                         DataRow row = dataTable.Rows[0];
                         cntrlTxtName.Text = row[0].ToString();
-                        cntrlTxtCategory.Text = row[1].ToString();
-                        cntrlTxtUnit.Text = row[2].ToString();
-                        cntrlTxtPrize.Text = Convert.ToString(row[3]);
-                        cntrlTxtDiscount.Text = Convert.ToString(row[4]);
-                        cntrlTxtCurrent.Text = Convert.ToString(row[5]);
-                        cntrlTxtCritical.Text = Convert.ToString(row[6]);
+                        cntrlRtxtDescription.Text = row[1].ToString();
+                        cntrlTxtCategory.Text = row[2].ToString();
+                        cntrlTxtUnit.Text = row[3].ToString();
+                        cntrlTxtPrize.Text = Convert.ToString(row[4]);
+                        cntrlTxtDiscount.Text = Convert.ToString(row[5]);
+                        cntrlTxtCurrent.Text = Convert.ToString(row[6]);
+                        cntrlTxtCritical.Text = Convert.ToString(row[7]);
                     }
                 }
             }
@@ -149,9 +159,9 @@ namespace ForestGladeApp.Forms
 
         private void cntrlServicePnlEditService_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                var query = @"UPDATE ServiceTable SET Name = @param1, Category = @param2, Unit = @param3, Prize = @param4, AvailableDiscount = @param5, AvailableAmount = @param6, CriticalAmount = @param7 WHERE id = @param8";
+                var query = @"UPDATE ServiceTable SET Name = @param1, Category = @param2, Unit = @param3, Prize = @param4, AvailableDiscount = @param5, AvailableAmount = @param6, CriticalAmount = @param7, Description = @param8 WHERE id = @param9";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@param1", cntrlTxtName.Text);
@@ -161,14 +171,15 @@ namespace ForestGladeApp.Forms
                     cmd.Parameters.AddWithValue("@param5", float.Parse(cntrlTxtDiscount.Text) / 100);
                     cmd.Parameters.AddWithValue("@param6", int.Parse(cntrlTxtCurrent.Text));
                     cmd.Parameters.AddWithValue("@param7", int.Parse(cntrlTxtCritical.Text));
-                    cmd.Parameters.AddWithValue("@param8", this._id);
+                    cmd.Parameters.AddWithValue("@param8", cntrlRtxtDescription.Text);
+                    cmd.Parameters.AddWithValue("@param9", this._id);
 
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     connection.Close();
 
                 }
-                var command = @"SELECT Name, Category, Prize, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id ='" + this._id + "'";
+                var command = @"SELECT Name, Description, Category, Prize, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id ='" + this._id + "'";
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(command, connection);
                 DataTable dataTable = new DataTable();
@@ -178,10 +189,11 @@ namespace ForestGladeApp.Forms
                 {
                     DataRow row = dataTable.Rows[0];
                     this.Nazwa = row[0].ToString();
-                    this.Kategoria = row[1].ToString();
-                    this.Cena = Convert.ToSingle(row[2]);
-                    this.StanProduktu = (int)row[3];
-                    this.StanKrytyczny = (int)row[4];
+                    this.Opis = row[1].ToString();
+                    this.Kategoria = row[2].ToString();
+                    this.Cena = Convert.ToSingle(row[3]);
+                    this.StanProduktu = (int)row[4];
+                    this.StanKrytyczny = (int)row[5];
                     this.Kolor = Color.White;
                 }
             }
@@ -189,14 +201,14 @@ namespace ForestGladeApp.Forms
             servicePanels[GetCurrentPanel()].BringToFront();
         }
 
-        private void cntrlPnlServiceView_MouseEnter(object sender, EventArgs e)
+        private void cntrlServicePnlBackground_MouseEnter(object sender, EventArgs e)
         {
             this.Kolor = Color.Silver;
         }
 
-        private void cntrlPnlServiceView_MouseLeave(object sender, EventArgs e)
+        private void cntrlServicePnlBackground_MouseLeave(object sender, EventArgs e)
         {
-            this.Kolor = Color.White;
+            this.Kolor = Color.LightGray;
         }
     }
 }

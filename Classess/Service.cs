@@ -11,8 +11,11 @@ namespace ForestGladeApp.Classess
 {
     class Service
     {
+        private string connectionString = @"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True";
+
         private int id;
         private string Name;
+        public string Description { get; }
         private string Category;
         private string Unit;
         private float Prize;
@@ -23,15 +26,15 @@ namespace ForestGladeApp.Classess
         //private float Time;
         public Service(string name)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                var query = @"SELECT Category, Unit, Prize, AvailableDiscount, id, AvailableAmount, CriticalAmount FROM ServiceTable WHERE Name = '" + name + "'" ;
+                var query = @"SELECT Category, Unit, Prize, AvailableDiscount, id, AvailableAmount, CriticalAmount FROM ServiceTable WHERE Name = '" + name + "'";
                 connection.Open();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                 connection.Close();
                 DataTable tab = new DataTable();
                 dataAdapter.Fill(tab);
-                if(tab.Rows.Count > 0)
+                if (tab.Rows.Count > 0)
                 {
                     DataRow row = tab.Rows[0];
                     this.Category = (string)row[0];
@@ -42,6 +45,32 @@ namespace ForestGladeApp.Classess
                     this.AvailableAmount = Convert.ToInt16(row[5]);
                     this.CriticalAmount = Convert.ToInt16(row[6]);
                     this.Name = name;
+                }
+            }
+        }
+
+        public Service(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                this.id = id;
+                var query = @"SELECT Name, Description, Category, Unit, Prize, AvailableDiscount, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id = '" + id + "'";
+                connection.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                connection.Close();
+                DataTable tab = new DataTable();
+                dataAdapter.Fill(tab);
+                if (tab.Rows.Count == 1)
+                {
+                    DataRow row = tab.Rows[0];
+                    this.Name = row[0].ToString();
+                    this.Description = row[1].ToString();
+                    this.Category = row[2].ToString();
+                    this.Unit = row[3].ToString();
+                    this.Prize = Convert.ToSingle(row[4]);
+                    this.AvailableDiscount = Convert.ToSingle(row[5]);
+                    this.AvailableAmount = Convert.ToInt16(row[6]);
+                    this.CriticalAmount = Convert.ToInt16(row[7]);
                 }
             }
         }

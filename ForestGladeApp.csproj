@@ -56,6 +56,12 @@
     <Compile Include="Forms\CntrlService.Designer.cs">
       <DependentUpon>CntrlService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CntrlServiceAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CntrlServiceAdd.Designer.cs">
+      <DependentUpon>CntrlServiceAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CntrlServiceList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CntrlService.resx">
       <DependentUpon>CntrlService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CntrlServiceAdd.resx">
+      <DependentUpon>CntrlServiceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CntrlServiceList.resx">
       <DependentUpon>CntrlServiceList.cs</DependentUpon>
