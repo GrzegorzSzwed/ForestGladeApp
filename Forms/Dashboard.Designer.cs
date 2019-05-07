@@ -46,6 +46,9 @@
             this.btnUser_ListUsers = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlDashboard = new System.Windows.Forms.Panel();
+            this.pnlOrder = new System.Windows.Forms.Panel();
+            this.pnlOrder_pnlListOrders = new System.Windows.Forms.Panel();
+            this.pnlOrder_pnlAddOrder = new System.Windows.Forms.Panel();
             this.pnlService = new System.Windows.Forms.Panel();
             this.pnlService_pnlAddService = new System.Windows.Forms.Panel();
             this.pnlService_pnlListServices = new System.Windows.Forms.Panel();
@@ -57,13 +60,18 @@
             this.pnlUser_pnlListUsers = new System.Windows.Forms.Panel();
             this.flwUsers = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlUser_pnlAddUser = new System.Windows.Forms.Panel();
-            this.pnlOrder = new System.Windows.Forms.Panel();
-            this.pnlOrder_pnlAddOrder = new System.Windows.Forms.Panel();
-            this.pnlOrder_pnlListOrders = new System.Windows.Forms.Panel();
+            this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlMiddle = new System.Windows.Forms.Panel();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.cntrlServiceAdd1 = new ForestGladeApp.Forms.CntrlServiceAdd();
+            this.cntrlOrder1 = new ForestGladeApp.Forms.CntrlOrder();
             this.tblDashboard.SuspendLayout();
             this.flwBtnsDashboard.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
+            this.pnlOrder.SuspendLayout();
+            this.pnlOrder_pnlListOrders.SuspendLayout();
+            this.pnlOrder_pnlAddOrder.SuspendLayout();
             this.pnlService.SuspendLayout();
             this.pnlService_pnlAddService.SuspendLayout();
             this.pnlService_pnlListServices.SuspendLayout();
@@ -72,7 +80,8 @@
             this.tblMenu_tblUser.SuspendLayout();
             this.pnlUser_pnlInterface.SuspendLayout();
             this.pnlUser_pnlListUsers.SuspendLayout();
-            this.pnlOrder.SuspendLayout();
+            this.tblMenu.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnService_ListServices
@@ -146,9 +155,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(26, 170);
+            this.label3.Location = new System.Drawing.Point(116, 541);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 42);
+            this.label3.Size = new System.Drawing.Size(131, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Paneł Główny";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -194,15 +203,15 @@
             this.tblDashboard.ColumnCount = 1;
             this.tblDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblDashboard.Controls.Add(this.flwBtnsDashboard, 0, 0);
             this.tblDashboard.Controls.Add(this.pnlDashboard, 0, 1);
+            this.tblDashboard.Controls.Add(this.tblMenu, 0, 0);
             this.tblDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblDashboard.Location = new System.Drawing.Point(0, 0);
             this.tblDashboard.Name = "tblDashboard";
             this.tblDashboard.RowCount = 2;
             this.tblDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tblDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblDashboard.Size = new System.Drawing.Size(1142, 639);
+            this.tblDashboard.Size = new System.Drawing.Size(1408, 702);
             this.tblDashboard.TabIndex = 6;
             // 
             // flwBtnsDashboard
@@ -219,9 +228,10 @@
             this.flwBtnsDashboard.Controls.Add(this.btnUser_ListUsers);
             this.flwBtnsDashboard.Controls.Add(this.btnBack);
             this.flwBtnsDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwBtnsDashboard.Location = new System.Drawing.Point(3, 3);
+            this.flwBtnsDashboard.Location = new System.Drawing.Point(0, 0);
+            this.flwBtnsDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.flwBtnsDashboard.Name = "flwBtnsDashboard";
-            this.flwBtnsDashboard.Size = new System.Drawing.Size(1136, 44);
+            this.flwBtnsDashboard.Size = new System.Drawing.Size(704, 50);
             this.flwBtnsDashboard.TabIndex = 1;
             // 
             // btnUser_NewUser
@@ -291,14 +301,44 @@
             // 
             // pnlDashboard
             // 
+            this.pnlDashboard.Controls.Add(this.pnlOrder);
             this.pnlDashboard.Controls.Add(this.pnlService);
             this.pnlDashboard.Controls.Add(this.pnlUser);
-            this.pnlDashboard.Controls.Add(this.pnlOrder);
             this.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDashboard.Location = new System.Drawing.Point(3, 53);
             this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.Size = new System.Drawing.Size(1136, 583);
+            this.pnlDashboard.Size = new System.Drawing.Size(1402, 646);
             this.pnlDashboard.TabIndex = 2;
+            // 
+            // pnlOrder
+            // 
+            this.pnlOrder.Controls.Add(this.pnlOrder_pnlListOrders);
+            this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOrder.Location = new System.Drawing.Point(0, 0);
+            this.pnlOrder.Name = "pnlOrder";
+            this.pnlOrder.Size = new System.Drawing.Size(1402, 646);
+            this.pnlOrder.TabIndex = 8;
+            // 
+            // pnlOrder_pnlListOrders
+            // 
+            this.pnlOrder_pnlListOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlOrder_pnlListOrders.Controls.Add(this.pnlOrder_pnlAddOrder);
+            this.pnlOrder_pnlListOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOrder_pnlListOrders.Location = new System.Drawing.Point(0, 0);
+            this.pnlOrder_pnlListOrders.Name = "pnlOrder_pnlListOrders";
+            this.pnlOrder_pnlListOrders.Size = new System.Drawing.Size(1402, 646);
+            this.pnlOrder_pnlListOrders.TabIndex = 2;
+            // 
+            // pnlOrder_pnlAddOrder
+            // 
+            this.pnlOrder_pnlAddOrder.BackColor = System.Drawing.Color.White;
+            this.pnlOrder_pnlAddOrder.Controls.Add(this.cntrlOrder1);
+            this.pnlOrder_pnlAddOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOrder_pnlAddOrder.Location = new System.Drawing.Point(0, 0);
+            this.pnlOrder_pnlAddOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlOrder_pnlAddOrder.Name = "pnlOrder_pnlAddOrder";
+            this.pnlOrder_pnlAddOrder.Size = new System.Drawing.Size(1402, 646);
+            this.pnlOrder_pnlAddOrder.TabIndex = 3;
             // 
             // pnlService
             // 
@@ -307,7 +347,7 @@
             this.pnlService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlService.Location = new System.Drawing.Point(0, 0);
             this.pnlService.Name = "pnlService";
-            this.pnlService.Size = new System.Drawing.Size(1136, 583);
+            this.pnlService.Size = new System.Drawing.Size(1402, 646);
             this.pnlService.TabIndex = 8;
             // 
             // pnlService_pnlAddService
@@ -316,7 +356,7 @@
             this.pnlService_pnlAddService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlService_pnlAddService.Location = new System.Drawing.Point(0, 0);
             this.pnlService_pnlAddService.Name = "pnlService_pnlAddService";
-            this.pnlService_pnlAddService.Size = new System.Drawing.Size(1136, 583);
+            this.pnlService_pnlAddService.Size = new System.Drawing.Size(1402, 646);
             this.pnlService_pnlAddService.TabIndex = 1;
             // 
             // pnlService_pnlListServices
@@ -325,7 +365,7 @@
             this.pnlService_pnlListServices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlService_pnlListServices.Location = new System.Drawing.Point(0, 0);
             this.pnlService_pnlListServices.Name = "pnlService_pnlListServices";
-            this.pnlService_pnlListServices.Size = new System.Drawing.Size(1136, 583);
+            this.pnlService_pnlListServices.Size = new System.Drawing.Size(1402, 646);
             this.pnlService_pnlListServices.TabIndex = 0;
             // 
             // flwServices
@@ -335,7 +375,7 @@
             this.flwServices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flwServices.Location = new System.Drawing.Point(0, 0);
             this.flwServices.Name = "flwServices";
-            this.flwServices.Size = new System.Drawing.Size(1136, 583);
+            this.flwServices.Size = new System.Drawing.Size(1402, 646);
             this.flwServices.TabIndex = 0;
             // 
             // pnlUser
@@ -343,7 +383,7 @@
             this.pnlUser.Controls.Add(this.tblUserMain);
             this.pnlUser.Location = new System.Drawing.Point(3, 6);
             this.pnlUser.Name = "pnlUser";
-            this.pnlUser.Size = new System.Drawing.Size(410, 218);
+            this.pnlUser.Size = new System.Drawing.Size(1124, 568);
             this.pnlUser.TabIndex = 7;
             // 
             // tblUserMain
@@ -358,8 +398,8 @@
             this.tblUserMain.Name = "tblUserMain";
             this.tblUserMain.RowCount = 1;
             this.tblUserMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblUserMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 218F));
-            this.tblUserMain.Size = new System.Drawing.Size(410, 218);
+            this.tblUserMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 568F));
+            this.tblUserMain.Size = new System.Drawing.Size(1124, 568);
             this.tblUserMain.TabIndex = 2;
             // 
             // tblMenu_tblUser
@@ -380,7 +420,7 @@
             this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblMenu_tblUser.Size = new System.Drawing.Size(129, 212);
+            this.tblMenu_tblUser.Size = new System.Drawing.Size(364, 562);
             this.tblMenu_tblUser.TabIndex = 1;
             // 
             // pnlUser_pnlInterface
@@ -388,9 +428,9 @@
             this.pnlUser_pnlInterface.Controls.Add(this.pnlUser_pnlListUsers);
             this.pnlUser_pnlInterface.Controls.Add(this.pnlUser_pnlAddUser);
             this.pnlUser_pnlInterface.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlUser_pnlInterface.Location = new System.Drawing.Point(138, 3);
+            this.pnlUser_pnlInterface.Location = new System.Drawing.Point(373, 3);
             this.pnlUser_pnlInterface.Name = "pnlUser_pnlInterface";
-            this.pnlUser_pnlInterface.Size = new System.Drawing.Size(269, 212);
+            this.pnlUser_pnlInterface.Size = new System.Drawing.Size(748, 562);
             this.pnlUser_pnlInterface.TabIndex = 2;
             // 
             // pnlUser_pnlListUsers
@@ -416,28 +456,57 @@
             this.pnlUser_pnlAddUser.Size = new System.Drawing.Size(200, 100);
             this.pnlUser_pnlAddUser.TabIndex = 0;
             // 
-            // pnlOrder
+            // tblMenu
             // 
-            this.pnlOrder.Controls.Add(this.pnlOrder_pnlAddOrder);
-            this.pnlOrder.Controls.Add(this.pnlOrder_pnlListOrders);
-            this.pnlOrder.Location = new System.Drawing.Point(18, 16);
-            this.pnlOrder.Name = "pnlOrder";
-            this.pnlOrder.Size = new System.Drawing.Size(406, 243);
-            this.pnlOrder.TabIndex = 8;
+            this.tblMenu.ColumnCount = 3;
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblMenu.Controls.Add(this.flwBtnsDashboard, 0, 0);
+            this.tblMenu.Controls.Add(this.pnlMiddle, 1, 0);
+            this.tblMenu.Controls.Add(this.pnlRight, 2, 0);
+            this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblMenu.Location = new System.Drawing.Point(0, 0);
+            this.tblMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.tblMenu.Name = "tblMenu";
+            this.tblMenu.RowCount = 1;
+            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tblMenu.Size = new System.Drawing.Size(1408, 50);
+            this.tblMenu.TabIndex = 3;
             // 
-            // pnlOrder_pnlAddOrder
+            // pnlMiddle
             // 
-            this.pnlOrder_pnlAddOrder.Location = new System.Drawing.Point(3, 3);
-            this.pnlOrder_pnlAddOrder.Name = "pnlOrder_pnlAddOrder";
-            this.pnlOrder_pnlAddOrder.Size = new System.Drawing.Size(188, 63);
-            this.pnlOrder_pnlAddOrder.TabIndex = 3;
+            this.pnlMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMiddle.Location = new System.Drawing.Point(704, 0);
+            this.pnlMiddle.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMiddle.Name = "pnlMiddle";
+            this.pnlMiddle.Size = new System.Drawing.Size(140, 50);
+            this.pnlMiddle.TabIndex = 2;
             // 
-            // pnlOrder_pnlListOrders
+            // pnlRight
             // 
-            this.pnlOrder_pnlListOrders.Location = new System.Drawing.Point(30, 72);
-            this.pnlOrder_pnlListOrders.Name = "pnlOrder_pnlListOrders";
-            this.pnlOrder_pnlListOrders.Size = new System.Drawing.Size(200, 100);
-            this.pnlOrder_pnlListOrders.TabIndex = 2;
+            this.pnlRight.BackColor = System.Drawing.Color.Teal;
+            this.pnlRight.Controls.Add(this.lblTitle);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRight.Location = new System.Drawing.Point(844, 0);
+            this.pnlRight.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(564, 50);
+            this.pnlRight.TabIndex = 3;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(278, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(274, 23);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Leśna Polana Managment";
             // 
             // cntrlServiceAdd1
             // 
@@ -451,17 +520,27 @@
             this.cntrlServiceAdd1.Name = "cntrlServiceAdd1";
             this.cntrlServiceAdd1.Prize = 0F;
             this.cntrlServiceAdd1.ServiceName = null;
-            this.cntrlServiceAdd1.Size = new System.Drawing.Size(1136, 583);
+            this.cntrlServiceAdd1.Size = new System.Drawing.Size(1402, 646);
             this.cntrlServiceAdd1.TabIndex = 0;
             this.cntrlServiceAdd1.Time = 0F;
             this.cntrlServiceAdd1.Unit = null;
+            // 
+            // cntrlOrder1
+            // 
+            this.cntrlOrder1.BackColor = System.Drawing.Color.White;
+            this.cntrlOrder1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlOrder1.Location = new System.Drawing.Point(0, 0);
+            this.cntrlOrder1.Name = "cntrlOrder1";
+            this.cntrlOrder1.Size = new System.Drawing.Size(1402, 646);
+            this.cntrlOrder1.TabIndex = 0;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1142, 639);
+            this.ClientSize = new System.Drawing.Size(1408, 702);
             this.Controls.Add(this.tblDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Dashboard";
@@ -471,6 +550,9 @@
             this.tblDashboard.ResumeLayout(false);
             this.flwBtnsDashboard.ResumeLayout(false);
             this.pnlDashboard.ResumeLayout(false);
+            this.pnlOrder.ResumeLayout(false);
+            this.pnlOrder_pnlListOrders.ResumeLayout(false);
+            this.pnlOrder_pnlAddOrder.ResumeLayout(false);
             this.pnlService.ResumeLayout(false);
             this.pnlService_pnlAddService.ResumeLayout(false);
             this.pnlService_pnlListServices.ResumeLayout(false);
@@ -480,7 +562,9 @@
             this.tblMenu_tblUser.PerformLayout();
             this.pnlUser_pnlInterface.ResumeLayout(false);
             this.pnlUser_pnlListUsers.ResumeLayout(false);
-            this.pnlOrder.ResumeLayout(false);
+            this.tblMenu.ResumeLayout(false);
+            this.pnlRight.ResumeLayout(false);
+            this.pnlRight.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -518,5 +602,10 @@
         private System.Windows.Forms.Panel pnlOrder_pnlListOrders;
         private System.Windows.Forms.FlowLayoutPanel flwServices;
         private CntrlServiceAdd cntrlServiceAdd1;
+        private System.Windows.Forms.TableLayoutPanel tblMenu;
+        private System.Windows.Forms.Panel pnlMiddle;
+        private System.Windows.Forms.Panel pnlRight;
+        private System.Windows.Forms.Label lblTitle;
+        private CntrlOrder cntrlOrder1;
     }
 }

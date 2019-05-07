@@ -156,11 +156,11 @@ namespace ForestGladeApp.Forms
         //btns for orders
         private void btnOrder_NewOrder_Click(object sender, EventArgs e)
         {
-
+            OrderPanels[0].BringToFront();
         }
         private void btnOrder_ListOrders_Click(object sender, EventArgs e)
         {
-
+            OrderPanels[1].BringToFront();
         }
 
         //btns for services
@@ -187,7 +187,7 @@ namespace ForestGladeApp.Forms
                 for (int i = 0; i < cntrls.Length; i++)
                 {
                     cntrls[i] = TransformServiceToCntrl(new CntrlService(employee.GetPermission()), services[i]);
-                    cntrls[i].Width = flwServices.Width-50;
+                    cntrls[i].Width = flwServices.Width-100;
                 }
                 flwServices.Controls.AddRange(cntrls);
             }

@@ -50,6 +50,12 @@
     <Compile Include="Classess\Employee.cs" />
     <Compile Include="Classess\Order.cs" />
     <Compile Include="Classess\Service.cs" />
+    <Compile Include="Forms\CntrlOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CntrlOrder.Designer.cs">
+      <DependentUpon>CntrlOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CntrlService.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="Forms\CntrlServiceList.Designer.cs">
       <DependentUpon>CntrlServiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CntrlTimeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CntrlTimeLine.Designer.cs">
+      <DependentUpon>CntrlTimeLine.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CntrlUser.cs">
       <SubType>UserControl</SubType>
@@ -86,14 +98,11 @@
     <Compile Include="Forms\EntryForm.Designer.cs">
       <DependentUpon>EntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\OrderCalendar.Designer.cs">
-      <DependentUpon>OrderCalendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CntrlOrder.resx">
+      <DependentUpon>CntrlOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CntrlService.resx">
       <DependentUpon>CntrlService.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +112,9 @@
     <EmbeddedResource Include="Forms\CntrlServiceList.resx">
       <DependentUpon>CntrlServiceList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CntrlTimeLine.resx">
+      <DependentUpon>CntrlTimeLine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CntrlUser.resx">
       <DependentUpon>CntrlUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForm.resx">
       <DependentUpon>EntryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderCalendar.resx">
-      <DependentUpon>OrderCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

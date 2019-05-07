@@ -262,16 +262,15 @@
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtName.Location = new System.Drawing.Point(453, 18);
+            this.txtName.Location = new System.Drawing.Point(488, 18);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(445, 27);
+            this.txtName.Size = new System.Drawing.Size(374, 27);
             this.txtName.TabIndex = 11;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // rtxtDescription
             // 
             this.rtxtDescription.BackColor = System.Drawing.Color.White;
-            this.rtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtxtDescription.Location = new System.Drawing.Point(453, 67);
             this.rtxtDescription.Name = "rtxtDescription";
@@ -296,12 +295,12 @@
             "[Wesele] Gorąca kolacja III",
             "[Wesele] Ciepłe napoje",
             "[Wesele] Usługi",
-            "[Wesele] Wypożyczenia",
             "[Domki]",
             "[Sherwood]",
             "[Basen]",
             "[Sauna]",
-            "[Piknik]"});
+            "[Piknik]",
+            "[Wesele] Napoje"});
             this.cmbCategory.Location = new System.Drawing.Point(486, 146);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(379, 28);
@@ -359,23 +358,24 @@
             // 
             // flw
             // 
-            this.flw.BackColor = System.Drawing.Color.Olive;
+            this.flw.BackColor = System.Drawing.Color.ForestGreen;
             this.flw.Controls.Add(this.btnAddService);
             this.flw.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flw.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flw.Location = new System.Drawing.Point(3, 3);
+            this.flw.Location = new System.Drawing.Point(0, 0);
+            this.flw.Margin = new System.Windows.Forms.Padding(0);
             this.flw.Name = "flw";
-            this.flw.Size = new System.Drawing.Size(901, 44);
+            this.flw.Size = new System.Drawing.Size(907, 50);
             this.flw.TabIndex = 1;
             // 
             // btnAddService
             // 
-            this.btnAddService.BackColor = System.Drawing.Color.Olive;
+            this.btnAddService.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAddService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddService.BackgroundImage")));
             this.btnAddService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddService.FlatAppearance.BorderSize = 0;
             this.btnAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddService.Location = new System.Drawing.Point(838, 3);
+            this.btnAddService.Location = new System.Drawing.Point(844, 3);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(60, 41);
             this.btnAddService.TabIndex = 1;

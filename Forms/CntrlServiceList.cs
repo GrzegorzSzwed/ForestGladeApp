@@ -15,69 +15,103 @@ namespace ForestGladeApp.Forms
         public CntrlServiceList()
         {
             InitializeComponent();
+            tbl.BringToFront();
+            _toMove = false;
+            _ifinList = true;
+            _todelete = false;
         }
 
-        #region Properties
+        public bool _toMove { get; set; }
         private string _name;
-        private string _category;
-        private bool _status;
-        private Color _backgroundColor;
-        private int _count;
+        private string _description;
+        private Image _image;
+        private int _id;
+        private bool _ifinList;
+        private bool _todelete;
+        private int _width;
 
-        public int DostepnaIlosc
+        public int WidthContrl
         {
-            get { return _count; }
-            set { _count = value; CheckBCntrlServiceList.Text = value.ToString(); }
+            get { return _width; }
+            set { _width = value; this.Width = value; pnlTimeLine.Width = value; }
         }
 
 
-        public Color KolorTla
+        public bool Delete
         {
-            get { return _backgroundColor; }
-            set { _backgroundColor = value; pnlServiceCntrlServiceList.BackColor = value; }
+            get { return _todelete; }
+            set { _todelete = value; }
         }
 
 
-        public bool Status
+        public bool InServicesList
         {
-            get { return _status; }
-            set { _status = value; CheckBCntrlServiceList.Checked = value; }
+            get { return _ifinList; }
+            set { _ifinList = value; btnAdd.Visible = value; lblDescription.Visible = value; pnlTimeLine.BringToFront(); this.Height = 30; }
         }
 
 
-        public string Kategoria
+        public int ID
         {
-            get { return _category; }
-            set { _category = value; lblCategoryServiceList.Text = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
+        public Image ImageService
+        {
+            get { return _image; }
+            set { _image = value; picture.Image = value; }
+        }
 
-        public string Nazwa
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; lblDescription.Text = value; }
+        }
+
+        public string NameService
         {
             get { return _name; }
-            set { _name = value; LblNameCntrlService.Text = value; }
+            set { _name = value; lblName.Text = value; lblTimeLineName.Text = value; }
         }
 
-        #endregion
-
-        #region Events
-        private void pnlServiceCntrlServiceList_MouseEnter(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.KolorTla = Color.Silver;
+            _toMove ^= true;
+            if (_toMove)
+                btnAdd.BackColor = Color.Orange;
+            else
+                btnAdd.BackColor = Color.White;
         }
 
-        private void pnlServiceCntrlServiceList_MouseLeave(object sender, EventArgs e)
+        private void tbl_MouseEnter(object sender, EventArgs e)
         {
-            this.KolorTla = Color.LightGray;
+            tbl.BackColor = Color.LightGray;
         }
 
-        private void CheckBCntrlServiceList_CheckedChanged(object sender, EventArgs e)
+        private void tbl_MouseLeave(object sender, EventArgs e)
         {
-            this.Status = CheckBCntrlServiceList.Checked;
+            tbl.BackColor = Color.White;
         }
 
-        #endregion
+        private void pnlTimeLine_MouseEnter(object sender, EventArgs e)
+        {
+            pnlTimeLine.BackColor = Color.LightGray;
+        }
 
+        private void pnlTimeLine_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTimeLine.BackColor = Color.White;
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (Delete)
+                btnClose.BackColor = Color.Silver;
+            else
+                btnClose.BackColor = Color.White;
+
+            _todelete ^= true;
+        }
     }
 }

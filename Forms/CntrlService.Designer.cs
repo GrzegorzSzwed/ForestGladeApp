@@ -37,41 +37,41 @@
             this.cntrlPnlServiceEdit = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cntrlTxtName = new System.Windows.Forms.TextBox();
-            this.cntrlTxtCritical = new System.Windows.Forms.TextBox();
-            this.cntrlTxtCategory = new System.Windows.Forms.TextBox();
-            this.cntrlTxtCurrent = new System.Windows.Forms.TextBox();
-            this.cntrlTxtUnit = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cntrlTxtDiscount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cntrlTxtPrize = new System.Windows.Forms.TextBox();
             this.cntrlServicePnlEditService = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cntrlTxtCategory = new System.Windows.Forms.TextBox();
+            this.cntrlTxtUnit = new System.Windows.Forms.TextBox();
+            this.cntrlTxtName = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cntrlTxtDiscount = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cntrlTxtCurrent = new System.Windows.Forms.TextBox();
+            this.cntrlTxtCritical = new System.Windows.Forms.TextBox();
+            this.cntrlRtxtDescription = new System.Windows.Forms.RichTextBox();
             this.tblCntrlService = new System.Windows.Forms.TableLayoutPanel();
             this.cntrlServicePanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cntrlServicePnlBackground = new System.Windows.Forms.Panel();
             this.cntrlServiceLblDescription = new System.Windows.Forms.Label();
             this.cntrlPnlServiceView = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.cntrlRtxtDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cntrlServiceImage)).BeginInit();
             this.cntrlPnlServiceEdit.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tblCntrlService.SuspendLayout();
             this.cntrlServicePanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.cntrlServicePnlBackground.SuspendLayout();
             this.cntrlPnlServiceView.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // cntrlServiceImage
@@ -181,96 +181,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(136, 1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "/";
-            // 
-            // cntrlTxtName
-            // 
-            this.cntrlTxtName.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtName.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtName.Location = new System.Drawing.Point(3, 3);
-            this.cntrlTxtName.Name = "cntrlTxtName";
-            this.cntrlTxtName.Size = new System.Drawing.Size(156, 20);
-            this.cntrlTxtName.TabIndex = 6;
-            // 
-            // cntrlTxtCritical
-            // 
-            this.cntrlTxtCritical.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtCritical.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtCritical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtCritical.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtCritical.Location = new System.Drawing.Point(171, 3);
-            this.cntrlTxtCritical.Name = "cntrlTxtCritical";
-            this.cntrlTxtCritical.Size = new System.Drawing.Size(114, 20);
-            this.cntrlTxtCritical.TabIndex = 13;
-            // 
-            // cntrlTxtCategory
-            // 
-            this.cntrlTxtCategory.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtCategory.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtCategory.Location = new System.Drawing.Point(165, 3);
-            this.cntrlTxtCategory.Name = "cntrlTxtCategory";
-            this.cntrlTxtCategory.Size = new System.Drawing.Size(156, 20);
-            this.cntrlTxtCategory.TabIndex = 7;
-            // 
-            // cntrlTxtCurrent
-            // 
-            this.cntrlTxtCurrent.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtCurrent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtCurrent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtCurrent.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtCurrent.Location = new System.Drawing.Point(3, 3);
-            this.cntrlTxtCurrent.Name = "cntrlTxtCurrent";
-            this.cntrlTxtCurrent.Size = new System.Drawing.Size(114, 20);
-            this.cntrlTxtCurrent.TabIndex = 12;
-            // 
-            // cntrlTxtUnit
-            // 
-            this.cntrlTxtUnit.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtUnit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtUnit.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtUnit.Location = new System.Drawing.Point(327, 3);
-            this.cntrlTxtUnit.Name = "cntrlTxtUnit";
-            this.cntrlTxtUnit.Size = new System.Drawing.Size(158, 20);
-            this.cntrlTxtUnit.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(436, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "%";
-            // 
-            // cntrlTxtDiscount
-            // 
-            this.cntrlTxtDiscount.BackColor = System.Drawing.Color.Gray;
-            this.cntrlTxtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlTxtDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlTxtDiscount.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlTxtDiscount.Location = new System.Drawing.Point(291, 3);
-            this.cntrlTxtDiscount.Name = "cntrlTxtDiscount";
-            this.cntrlTxtDiscount.Size = new System.Drawing.Size(114, 20);
-            this.cntrlTxtDiscount.TabIndex = 11;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -309,6 +219,178 @@
             this.cntrlServicePnlEditService.TabIndex = 7;
             this.cntrlServicePnlEditService.UseVisualStyleBackColor = false;
             this.cntrlServicePnlEditService.Click += new System.EventHandler(this.cntrlServicePnlEditService_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(103, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(494, 94);
+            this.tableLayoutPanel3.TabIndex = 9;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtCategory, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtUnit, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtName, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(488, 25);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // cntrlTxtCategory
+            // 
+            this.cntrlTxtCategory.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtCategory.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtCategory.Location = new System.Drawing.Point(165, 3);
+            this.cntrlTxtCategory.Name = "cntrlTxtCategory";
+            this.cntrlTxtCategory.Size = new System.Drawing.Size(156, 20);
+            this.cntrlTxtCategory.TabIndex = 7;
+            // 
+            // cntrlTxtUnit
+            // 
+            this.cntrlTxtUnit.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtUnit.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtUnit.Location = new System.Drawing.Point(327, 3);
+            this.cntrlTxtUnit.Name = "cntrlTxtUnit";
+            this.cntrlTxtUnit.Size = new System.Drawing.Size(158, 20);
+            this.cntrlTxtUnit.TabIndex = 10;
+            // 
+            // cntrlTxtName
+            // 
+            this.cntrlTxtName.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtName.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtName.Location = new System.Drawing.Point(3, 3);
+            this.cntrlTxtName.Name = "cntrlTxtName";
+            this.cntrlTxtName.Size = new System.Drawing.Size(156, 20);
+            this.cntrlTxtName.TabIndex = 6;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cntrlRtxtDescription, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 34);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(488, 57);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 5;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtDiscount, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtCurrent, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtCritical, 2, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 34);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(482, 20);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(136, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "/";
+            // 
+            // cntrlTxtDiscount
+            // 
+            this.cntrlTxtDiscount.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtDiscount.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtDiscount.Location = new System.Drawing.Point(291, 3);
+            this.cntrlTxtDiscount.Name = "cntrlTxtDiscount";
+            this.cntrlTxtDiscount.Size = new System.Drawing.Size(114, 20);
+            this.cntrlTxtDiscount.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(436, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "%";
+            // 
+            // cntrlTxtCurrent
+            // 
+            this.cntrlTxtCurrent.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtCurrent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtCurrent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtCurrent.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtCurrent.Location = new System.Drawing.Point(3, 3);
+            this.cntrlTxtCurrent.Name = "cntrlTxtCurrent";
+            this.cntrlTxtCurrent.Size = new System.Drawing.Size(114, 20);
+            this.cntrlTxtCurrent.TabIndex = 12;
+            // 
+            // cntrlTxtCritical
+            // 
+            this.cntrlTxtCritical.BackColor = System.Drawing.Color.Gray;
+            this.cntrlTxtCritical.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlTxtCritical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlTxtCritical.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlTxtCritical.Location = new System.Drawing.Point(171, 3);
+            this.cntrlTxtCritical.Name = "cntrlTxtCritical";
+            this.cntrlTxtCritical.Size = new System.Drawing.Size(114, 20);
+            this.cntrlTxtCritical.TabIndex = 13;
+            // 
+            // cntrlRtxtDescription
+            // 
+            this.cntrlRtxtDescription.BackColor = System.Drawing.Color.White;
+            this.cntrlRtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cntrlRtxtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlRtxtDescription.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cntrlRtxtDescription.Location = new System.Drawing.Point(3, 3);
+            this.cntrlRtxtDescription.Name = "cntrlRtxtDescription";
+            this.cntrlRtxtDescription.Size = new System.Drawing.Size(482, 25);
+            this.cntrlRtxtDescription.TabIndex = 1;
+            this.cntrlRtxtDescription.Text = "";
             // 
             // tblCntrlService
             // 
@@ -389,88 +471,6 @@
             this.cntrlPnlServiceView.Size = new System.Drawing.Size(800, 100);
             this.cntrlPnlServiceView.TabIndex = 9;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(103, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(494, 94);
-            this.tableLayoutPanel3.TabIndex = 9;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtCategory, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtUnit, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.cntrlTxtName, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(488, 25);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.cntrlRtxtDescription, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 34);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(488, 57);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 5;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtDiscount, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label1, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtCurrent, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cntrlTxtCritical, 2, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 34);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(482, 20);
-            this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // cntrlRtxtDescription
-            // 
-            this.cntrlRtxtDescription.BackColor = System.Drawing.Color.White;
-            this.cntrlRtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cntrlRtxtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlRtxtDescription.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cntrlRtxtDescription.Location = new System.Drawing.Point(3, 3);
-            this.cntrlRtxtDescription.Name = "cntrlRtxtDescription";
-            this.cntrlRtxtDescription.Size = new System.Drawing.Size(482, 25);
-            this.cntrlRtxtDescription.TabIndex = 1;
-            this.cntrlRtxtDescription.Text = "";
-            // 
             // CntrlService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,6 +485,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tblCntrlService.ResumeLayout(false);
             this.tblCntrlService.PerformLayout();
             this.cntrlServicePanel.ResumeLayout(false);
@@ -493,12 +499,6 @@
             this.cntrlServicePnlBackground.ResumeLayout(false);
             this.cntrlServicePnlBackground.PerformLayout();
             this.cntrlPnlServiceView.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
