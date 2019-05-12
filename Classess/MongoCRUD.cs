@@ -34,10 +34,30 @@ namespace ForestGladeApp.Classess
             collection.DeleteOne(filter);
         }
 
+        public T LoadRecordByLoginAndPassword<T>(string login, string password)
+        {
+            var collection = db.GetCollection<T>("peaple");
+            
+            var builder = Builders<T>.Filter;
+            var filter = builder.Eq("login", login) & builder.Eq("password", password);
+
+            return collection.Find(filter).FirstOrDefault();
+        }
+
         public void InsertRecord<T>(string table, T record)
         {
             var collection = db.GetCollection<T>(table);
             collection.InsertOne(record);
+        }
+
+        public List<T> LoadRecordsByCategory<T>(string table, string category)
+        {
+            var collection = db.GetCollection<T>(table);
+
+            var builder = Builders<T>.Filter;
+            var filter = builder.Eq("category", category);
+
+            return collection.Find(filter).ToList();
         }
 
         public List<T> LoadRecords<T>(string table)

@@ -29,510 +29,981 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.btnService_ListServices = new System.Windows.Forms.Button();
-            this.btnService_NewService = new System.Windows.Forms.Button();
-            this.btnService = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPermission = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.tblDashboard = new System.Windows.Forms.TableLayoutPanel();
-            this.flwBtnsDashboard = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnUser_NewUser = new System.Windows.Forms.Button();
-            this.btnOrder_NewOrder = new System.Windows.Forms.Button();
-            this.btnOrder_ListOrders = new System.Windows.Forms.Button();
-            this.btnUser_ListUsers = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.flwTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pnlCompanyName = new System.Windows.Forms.Panel();
+            this.lblCompany = new System.Windows.Forms.Label();
             this.pnlDashboard = new System.Windows.Forms.Panel();
-            this.pnlOrder = new System.Windows.Forms.Panel();
-            this.pnlOrder_pnlListOrders = new System.Windows.Forms.Panel();
-            this.pnlOrder_pnlAddOrder = new System.Windows.Forms.Panel();
-            this.pnlService = new System.Windows.Forms.Panel();
-            this.pnlService_pnlAddService = new System.Windows.Forms.Panel();
-            this.pnlService_pnlListServices = new System.Windows.Forms.Panel();
-            this.flwServices = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlUser = new System.Windows.Forms.Panel();
-            this.tblUserMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tblMenu_tblUser = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlUser_pnlInterface = new System.Windows.Forms.Panel();
-            this.pnlUser_pnlListUsers = new System.Windows.Forms.Panel();
-            this.flwUsers = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlUser_pnlAddUser = new System.Windows.Forms.Panel();
-            this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlMiddle = new System.Windows.Forms.Panel();
-            this.pnlRight = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.cntrlServiceAdd1 = new ForestGladeApp.Forms.CntrlServiceAdd();
-            this.cntrlOrder1 = new ForestGladeApp.Forms.CntrlOrder();
+            this.pnlProgram = new System.Windows.Forms.Panel();
+            this.tblProgram = new System.Windows.Forms.TableLayoutPanel();
+            this.flwOptions = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnService = new System.Windows.Forms.Button();
+            this.btnPeaple = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnNewOrder = new System.Windows.Forms.Button();
+            this.btnListOrders = new System.Windows.Forms.Button();
+            this.btnNewService = new System.Windows.Forms.Button();
+            this.btnListServices = new System.Windows.Forms.Button();
+            this.btnNewEmployee = new System.Windows.Forms.Button();
+            this.btnListEmployees = new System.Windows.Forms.Button();
+            this.pnlBasement = new System.Windows.Forms.Panel();
+            this.pnlAddService = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.cmbUnit = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPrize = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.pnlInvitation = new System.Windows.Forms.Panel();
+            this.pictureBackground = new System.Windows.Forms.PictureBox();
+            this.pnlLogin = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlDefault = new System.Windows.Forms.Panel();
+            this.lbl01 = new System.Windows.Forms.Label();
+            this.pnlListServices = new System.Windows.Forms.Panel();
+            this.tblListServices = new System.Windows.Forms.TableLayoutPanel();
+            this.flwListServices = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlListServicesTop = new System.Windows.Forms.Panel();
+            this.pnlAddOrder = new System.Windows.Forms.Panel();
+            this.pnlListOrders = new System.Windows.Forms.Panel();
+            this.pnlAddEmployee = new System.Windows.Forms.Panel();
+            this.pnlListEmployees = new System.Windows.Forms.Panel();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.cntrlListOrders = new ForestGladeApp.Forms.CntrlOrder();
             this.tblDashboard.SuspendLayout();
-            this.flwBtnsDashboard.SuspendLayout();
+            this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
+            this.flwTop.SuspendLayout();
+            this.pnlCompanyName.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
-            this.pnlOrder.SuspendLayout();
-            this.pnlOrder_pnlListOrders.SuspendLayout();
-            this.pnlOrder_pnlAddOrder.SuspendLayout();
-            this.pnlService.SuspendLayout();
-            this.pnlService_pnlAddService.SuspendLayout();
-            this.pnlService_pnlListServices.SuspendLayout();
-            this.pnlUser.SuspendLayout();
-            this.tblUserMain.SuspendLayout();
-            this.tblMenu_tblUser.SuspendLayout();
-            this.pnlUser_pnlInterface.SuspendLayout();
-            this.pnlUser_pnlListUsers.SuspendLayout();
-            this.tblMenu.SuspendLayout();
-            this.pnlRight.SuspendLayout();
+            this.pnlProgram.SuspendLayout();
+            this.tblProgram.SuspendLayout();
+            this.flwOptions.SuspendLayout();
+            this.pnlBasement.SuspendLayout();
+            this.pnlAddService.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.pnlInvitation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBackground)).BeginInit();
+            this.pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlDefault.SuspendLayout();
+            this.pnlListServices.SuspendLayout();
+            this.tblListServices.SuspendLayout();
+            this.pnlAddOrder.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnService_ListServices
-            // 
-            this.btnService_ListServices.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnService_ListServices.BackgroundImage")));
-            this.btnService_ListServices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnService_ListServices.FlatAppearance.BorderSize = 0;
-            this.btnService_ListServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_ListServices.Location = new System.Drawing.Point(49, 3);
-            this.btnService_ListServices.Name = "btnService_ListServices";
-            this.btnService_ListServices.Size = new System.Drawing.Size(40, 40);
-            this.btnService_ListServices.TabIndex = 3;
-            this.btnService_ListServices.UseVisualStyleBackColor = true;
-            this.btnService_ListServices.Click += new System.EventHandler(this.btnService_ListServices_Click);
-            // 
-            // btnService_NewService
-            // 
-            this.btnService_NewService.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnService_NewService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnService_NewService.BackgroundImage")));
-            this.btnService_NewService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnService_NewService.FlatAppearance.BorderSize = 0;
-            this.btnService_NewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_NewService.Location = new System.Drawing.Point(279, 3);
-            this.btnService_NewService.Name = "btnService_NewService";
-            this.btnService_NewService.Size = new System.Drawing.Size(40, 40);
-            this.btnService_NewService.TabIndex = 16;
-            this.btnService_NewService.UseVisualStyleBackColor = true;
-            this.btnService_NewService.Click += new System.EventHandler(this.btnService_NewService_Click);
-            // 
-            // btnService
-            // 
-            this.btnService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnService.BackgroundImage")));
-            this.btnService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnService.FlatAppearance.BorderSize = 0;
-            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Location = new System.Drawing.Point(3, 3);
-            this.btnService.Name = "btnService";
-            this.btnService.Size = new System.Drawing.Size(40, 40);
-            this.btnService.TabIndex = 2;
-            this.btnService.UseVisualStyleBackColor = true;
-            this.btnService.Click += new System.EventHandler(this.btnService_Click);
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUser.BackgroundImage")));
-            this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Location = new System.Drawing.Point(95, 3);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(40, 40);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.UseVisualStyleBackColor = true;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOrder.BackgroundImage")));
-            this.btnOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Location = new System.Drawing.Point(141, 3);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(40, 40);
-            this.btnOrder.TabIndex = 0;
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(116, 541);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Paneł Główny";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // lblPermission
-            // 
-            this.lblPermission.AutoSize = true;
-            this.lblPermission.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPermission.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblPermission.Location = new System.Drawing.Point(3, 110);
-            this.lblPermission.Name = "lblPermission";
-            this.lblPermission.Size = new System.Drawing.Size(111, 21);
-            this.lblPermission.TabIndex = 2;
-            this.lblPermission.Text = "uprawnienia";
-            this.lblPermission.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblSurname.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblSurname.Location = new System.Drawing.Point(3, 80);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(110, 23);
-            this.lblSurname.TabIndex = 1;
-            this.lblSurname.Text = "Nazwisko";
-            this.lblSurname.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblName.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblName.Location = new System.Drawing.Point(3, 50);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 21);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Imię";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tblDashboard
             // 
             this.tblDashboard.ColumnCount = 1;
             this.tblDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblDashboard.Controls.Add(this.pnlTop, 0, 0);
             this.tblDashboard.Controls.Add(this.pnlDashboard, 0, 1);
-            this.tblDashboard.Controls.Add(this.tblMenu, 0, 0);
             this.tblDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblDashboard.Location = new System.Drawing.Point(0, 0);
+            this.tblDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.tblDashboard.Name = "tblDashboard";
             this.tblDashboard.RowCount = 2;
-            this.tblDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tblDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tblDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblDashboard.Size = new System.Drawing.Size(1408, 702);
-            this.tblDashboard.TabIndex = 6;
+            this.tblDashboard.Size = new System.Drawing.Size(1315, 603);
+            this.tblDashboard.TabIndex = 0;
             // 
-            // flwBtnsDashboard
+            // pnlTop
             // 
-            this.flwBtnsDashboard.BackColor = System.Drawing.Color.Teal;
-            this.flwBtnsDashboard.Controls.Add(this.btnService);
-            this.flwBtnsDashboard.Controls.Add(this.btnService_ListServices);
-            this.flwBtnsDashboard.Controls.Add(this.btnUser);
-            this.flwBtnsDashboard.Controls.Add(this.btnOrder);
-            this.flwBtnsDashboard.Controls.Add(this.btnUser_NewUser);
-            this.flwBtnsDashboard.Controls.Add(this.btnOrder_NewOrder);
-            this.flwBtnsDashboard.Controls.Add(this.btnService_NewService);
-            this.flwBtnsDashboard.Controls.Add(this.btnOrder_ListOrders);
-            this.flwBtnsDashboard.Controls.Add(this.btnUser_ListUsers);
-            this.flwBtnsDashboard.Controls.Add(this.btnBack);
-            this.flwBtnsDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwBtnsDashboard.Location = new System.Drawing.Point(0, 0);
-            this.flwBtnsDashboard.Margin = new System.Windows.Forms.Padding(0);
-            this.flwBtnsDashboard.Name = "flwBtnsDashboard";
-            this.flwBtnsDashboard.Size = new System.Drawing.Size(704, 50);
-            this.flwBtnsDashboard.TabIndex = 1;
+            this.pnlTop.Controls.Add(this.pictureAvatar);
+            this.pnlTop.Controls.Add(this.flwTop);
+            this.pnlTop.Controls.Add(this.pnlCompanyName);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1315, 100);
+            this.pnlTop.TabIndex = 3;
             // 
-            // btnUser_NewUser
+            // pictureAvatar
             // 
-            this.btnUser_NewUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUser_NewUser.BackgroundImage")));
-            this.btnUser_NewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUser_NewUser.FlatAppearance.BorderSize = 0;
-            this.btnUser_NewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser_NewUser.Location = new System.Drawing.Point(187, 3);
-            this.btnUser_NewUser.Name = "btnUser_NewUser";
-            this.btnUser_NewUser.Size = new System.Drawing.Size(40, 40);
-            this.btnUser_NewUser.TabIndex = 17;
-            this.btnUser_NewUser.UseVisualStyleBackColor = true;
-            this.btnUser_NewUser.Click += new System.EventHandler(this.btnUser_NewUser_Click);
+            this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureAvatar.BackColor = System.Drawing.Color.White;
+            this.pictureAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.BackgroundImage")));
+            this.pictureAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureAvatar.Location = new System.Drawing.Point(113, 12);
+            this.pictureAvatar.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(107, 82);
+            this.pictureAvatar.TabIndex = 4;
+            this.pictureAvatar.TabStop = false;
             // 
-            // btnOrder_NewOrder
+            // flwTop
             // 
-            this.btnOrder_NewOrder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOrder_NewOrder.BackgroundImage")));
-            this.btnOrder_NewOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOrder_NewOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder_NewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder_NewOrder.Location = new System.Drawing.Point(233, 3);
-            this.btnOrder_NewOrder.Name = "btnOrder_NewOrder";
-            this.btnOrder_NewOrder.Size = new System.Drawing.Size(40, 40);
-            this.btnOrder_NewOrder.TabIndex = 18;
-            this.btnOrder_NewOrder.UseVisualStyleBackColor = true;
-            this.btnOrder_NewOrder.Click += new System.EventHandler(this.btnOrder_NewOrder_Click);
+            this.flwTop.Controls.Add(this.btnLogin);
+            this.flwTop.Controls.Add(this.btnLogout);
+            this.flwTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flwTop.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flwTop.Location = new System.Drawing.Point(0, 0);
+            this.flwTop.Margin = new System.Windows.Forms.Padding(0);
+            this.flwTop.Name = "flwTop";
+            this.flwTop.Size = new System.Drawing.Size(1315, 60);
+            this.flwTop.TabIndex = 1;
             // 
-            // btnOrder_ListOrders
+            // btnLogin
             // 
-            this.btnOrder_ListOrders.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOrder_ListOrders.BackgroundImage")));
-            this.btnOrder_ListOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOrder_ListOrders.FlatAppearance.BorderSize = 0;
-            this.btnOrder_ListOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder_ListOrders.Location = new System.Drawing.Point(325, 3);
-            this.btnOrder_ListOrders.Name = "btnOrder_ListOrders";
-            this.btnOrder_ListOrders.Size = new System.Drawing.Size(40, 40);
-            this.btnOrder_ListOrders.TabIndex = 19;
-            this.btnOrder_ListOrders.UseVisualStyleBackColor = true;
-            this.btnOrder_ListOrders.Click += new System.EventHandler(this.btnOrder_ListOrders_Click);
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogin.Location = new System.Drawing.Point(1212, 3);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(100, 55);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Log in";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // btnUser_ListUsers
+            // btnLogout
             // 
-            this.btnUser_ListUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUser_ListUsers.BackgroundImage")));
-            this.btnUser_ListUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUser_ListUsers.FlatAppearance.BorderSize = 0;
-            this.btnUser_ListUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser_ListUsers.Location = new System.Drawing.Point(371, 3);
-            this.btnUser_ListUsers.Name = "btnUser_ListUsers";
-            this.btnUser_ListUsers.Size = new System.Drawing.Size(40, 40);
-            this.btnUser_ListUsers.TabIndex = 20;
-            this.btnUser_ListUsers.UseVisualStyleBackColor = true;
-            this.btnUser_ListUsers.Click += new System.EventHandler(this.btnUser_ListUsers_Click);
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Location = new System.Drawing.Point(1106, 3);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(100, 55);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // btnBack
+            // pnlCompanyName
             // 
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(417, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(40, 40);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.pnlCompanyName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlCompanyName.Controls.Add(this.lblCompany);
+            this.pnlCompanyName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCompanyName.Location = new System.Drawing.Point(0, 60);
+            this.pnlCompanyName.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlCompanyName.Name = "pnlCompanyName";
+            this.pnlCompanyName.Size = new System.Drawing.Size(1315, 40);
+            this.pnlCompanyName.TabIndex = 3;
+            // 
+            // lblCompany
+            // 
+            this.lblCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.BackColor = System.Drawing.Color.Transparent;
+            this.lblCompany.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.ForeColor = System.Drawing.Color.White;
+            this.lblCompany.Location = new System.Drawing.Point(226, 9);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(145, 25);
+            this.lblCompany.TabIndex = 4;
+            this.lblCompany.Text = "Leśna Polana";
             // 
             // pnlDashboard
             // 
-            this.pnlDashboard.Controls.Add(this.pnlOrder);
-            this.pnlDashboard.Controls.Add(this.pnlService);
-            this.pnlDashboard.Controls.Add(this.pnlUser);
+            this.pnlDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlDashboard.Controls.Add(this.pnlProgram);
+            this.pnlDashboard.Controls.Add(this.pnlInvitation);
             this.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDashboard.Location = new System.Drawing.Point(3, 53);
+            this.pnlDashboard.Location = new System.Drawing.Point(0, 100);
+            this.pnlDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.Size = new System.Drawing.Size(1402, 646);
-            this.pnlDashboard.TabIndex = 2;
+            this.pnlDashboard.Size = new System.Drawing.Size(1315, 503);
+            this.pnlDashboard.TabIndex = 0;
             // 
-            // pnlOrder
+            // pnlProgram
             // 
-            this.pnlOrder.Controls.Add(this.pnlOrder_pnlListOrders);
-            this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOrder.Location = new System.Drawing.Point(0, 0);
-            this.pnlOrder.Name = "pnlOrder";
-            this.pnlOrder.Size = new System.Drawing.Size(1402, 646);
-            this.pnlOrder.TabIndex = 8;
+            this.pnlProgram.Controls.Add(this.tblProgram);
+            this.pnlProgram.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlProgram.Location = new System.Drawing.Point(0, 0);
+            this.pnlProgram.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlProgram.Name = "pnlProgram";
+            this.pnlProgram.Size = new System.Drawing.Size(1315, 503);
+            this.pnlProgram.TabIndex = 2;
             // 
-            // pnlOrder_pnlListOrders
+            // tblProgram
             // 
-            this.pnlOrder_pnlListOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlOrder_pnlListOrders.Controls.Add(this.pnlOrder_pnlAddOrder);
-            this.pnlOrder_pnlListOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOrder_pnlListOrders.Location = new System.Drawing.Point(0, 0);
-            this.pnlOrder_pnlListOrders.Name = "pnlOrder_pnlListOrders";
-            this.pnlOrder_pnlListOrders.Size = new System.Drawing.Size(1402, 646);
-            this.pnlOrder_pnlListOrders.TabIndex = 2;
+            this.tblProgram.ColumnCount = 2;
+            this.tblProgram.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tblProgram.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblProgram.Controls.Add(this.flwOptions, 0, 0);
+            this.tblProgram.Controls.Add(this.pnlBasement, 1, 0);
+            this.tblProgram.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblProgram.Location = new System.Drawing.Point(0, 0);
+            this.tblProgram.Margin = new System.Windows.Forms.Padding(0);
+            this.tblProgram.Name = "tblProgram";
+            this.tblProgram.RowCount = 1;
+            this.tblProgram.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblProgram.Size = new System.Drawing.Size(1315, 503);
+            this.tblProgram.TabIndex = 0;
             // 
-            // pnlOrder_pnlAddOrder
+            // flwOptions
             // 
-            this.pnlOrder_pnlAddOrder.BackColor = System.Drawing.Color.White;
-            this.pnlOrder_pnlAddOrder.Controls.Add(this.cntrlOrder1);
-            this.pnlOrder_pnlAddOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOrder_pnlAddOrder.Location = new System.Drawing.Point(0, 0);
-            this.pnlOrder_pnlAddOrder.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlOrder_pnlAddOrder.Name = "pnlOrder_pnlAddOrder";
-            this.pnlOrder_pnlAddOrder.Size = new System.Drawing.Size(1402, 646);
-            this.pnlOrder_pnlAddOrder.TabIndex = 3;
+            this.flwOptions.AutoScroll = true;
+            this.flwOptions.BackColor = System.Drawing.Color.Teal;
+            this.flwOptions.Controls.Add(this.btnOrder);
+            this.flwOptions.Controls.Add(this.btnService);
+            this.flwOptions.Controls.Add(this.btnPeaple);
+            this.flwOptions.Controls.Add(this.btnHome);
+            this.flwOptions.Controls.Add(this.btnNewOrder);
+            this.flwOptions.Controls.Add(this.btnListOrders);
+            this.flwOptions.Controls.Add(this.btnNewService);
+            this.flwOptions.Controls.Add(this.btnListServices);
+            this.flwOptions.Controls.Add(this.btnNewEmployee);
+            this.flwOptions.Controls.Add(this.btnListEmployees);
+            this.flwOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwOptions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flwOptions.Location = new System.Drawing.Point(0, 0);
+            this.flwOptions.Margin = new System.Windows.Forms.Padding(0);
+            this.flwOptions.Name = "flwOptions";
+            this.flwOptions.Size = new System.Drawing.Size(200, 503);
+            this.flwOptions.TabIndex = 0;
+            this.flwOptions.WrapContents = false;
             // 
-            // pnlService
+            // btnOrder
             // 
-            this.pnlService.Controls.Add(this.pnlService_pnlAddService);
-            this.pnlService.Controls.Add(this.pnlService_pnlListServices);
-            this.pnlService.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlService.Location = new System.Drawing.Point(0, 0);
-            this.pnlService.Name = "pnlService";
-            this.pnlService.Size = new System.Drawing.Size(1402, 646);
-            this.pnlService.TabIndex = 8;
+            this.btnOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOrder.Location = new System.Drawing.Point(5, 5);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(5);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(190, 85);
+            this.btnOrder.TabIndex = 2;
+            this.btnOrder.Text = "Zamówienie";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
+            this.btnOrder.MouseEnter += new System.EventHandler(this.BtnOrder_MouseEnter);
+            this.btnOrder.MouseLeave += new System.EventHandler(this.BtnOrder_MouseLeave);
             // 
-            // pnlService_pnlAddService
+            // btnService
             // 
-            this.pnlService_pnlAddService.Controls.Add(this.cntrlServiceAdd1);
-            this.pnlService_pnlAddService.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlService_pnlAddService.Location = new System.Drawing.Point(0, 0);
-            this.pnlService_pnlAddService.Name = "pnlService_pnlAddService";
-            this.pnlService_pnlAddService.Size = new System.Drawing.Size(1402, 646);
-            this.pnlService_pnlAddService.TabIndex = 1;
+            this.btnService.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnService.FlatAppearance.BorderSize = 0;
+            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnService.ForeColor = System.Drawing.Color.White;
+            this.btnService.Image = ((System.Drawing.Image)(resources.GetObject("btnService.Image")));
+            this.btnService.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnService.Location = new System.Drawing.Point(5, 100);
+            this.btnService.Margin = new System.Windows.Forms.Padding(5);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(190, 85);
+            this.btnService.TabIndex = 3;
+            this.btnService.Text = "Usługi";
+            this.btnService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnService.UseVisualStyleBackColor = false;
+            this.btnService.Click += new System.EventHandler(this.BtnService_Click);
+            this.btnService.MouseEnter += new System.EventHandler(this.BtnService_MouseEnter);
+            this.btnService.MouseLeave += new System.EventHandler(this.BtnService_MouseLeave);
             // 
-            // pnlService_pnlListServices
+            // btnPeaple
             // 
-            this.pnlService_pnlListServices.Controls.Add(this.flwServices);
-            this.pnlService_pnlListServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlService_pnlListServices.Location = new System.Drawing.Point(0, 0);
-            this.pnlService_pnlListServices.Name = "pnlService_pnlListServices";
-            this.pnlService_pnlListServices.Size = new System.Drawing.Size(1402, 646);
-            this.pnlService_pnlListServices.TabIndex = 0;
+            this.btnPeaple.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPeaple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPeaple.FlatAppearance.BorderSize = 0;
+            this.btnPeaple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeaple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPeaple.ForeColor = System.Drawing.Color.White;
+            this.btnPeaple.Image = ((System.Drawing.Image)(resources.GetObject("btnPeaple.Image")));
+            this.btnPeaple.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPeaple.Location = new System.Drawing.Point(5, 195);
+            this.btnPeaple.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPeaple.Name = "btnPeaple";
+            this.btnPeaple.Size = new System.Drawing.Size(190, 85);
+            this.btnPeaple.TabIndex = 4;
+            this.btnPeaple.Text = "Ludzie";
+            this.btnPeaple.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeaple.UseVisualStyleBackColor = false;
+            this.btnPeaple.Click += new System.EventHandler(this.BtnPeaple_Click);
+            this.btnPeaple.MouseEnter += new System.EventHandler(this.BtnPeaple_MouseEnter);
+            this.btnPeaple.MouseLeave += new System.EventHandler(this.BtnPeaple_MouseLeave);
             // 
-            // flwServices
+            // btnHome
             // 
-            this.flwServices.AutoScroll = true;
-            this.flwServices.BackColor = System.Drawing.Color.Gainsboro;
-            this.flwServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwServices.Location = new System.Drawing.Point(0, 0);
-            this.flwServices.Name = "flwServices";
-            this.flwServices.Size = new System.Drawing.Size(1402, 646);
-            this.flwServices.TabIndex = 0;
+            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.Location = new System.Drawing.Point(5, 290);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(190, 85);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.Text = "Powrót";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // pnlUser
+            // btnNewOrder
             // 
-            this.pnlUser.Controls.Add(this.tblUserMain);
-            this.pnlUser.Location = new System.Drawing.Point(3, 6);
-            this.pnlUser.Name = "pnlUser";
-            this.pnlUser.Size = new System.Drawing.Size(1124, 568);
-            this.pnlUser.TabIndex = 7;
+            this.btnNewOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNewOrder.FlatAppearance.BorderSize = 0;
+            this.btnNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNewOrder.ForeColor = System.Drawing.Color.White;
+            this.btnNewOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnNewOrder.Image")));
+            this.btnNewOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewOrder.Location = new System.Drawing.Point(5, 385);
+            this.btnNewOrder.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNewOrder.Name = "btnNewOrder";
+            this.btnNewOrder.Size = new System.Drawing.Size(190, 57);
+            this.btnNewOrder.TabIndex = 6;
+            this.btnNewOrder.Text = "Utwórz";
+            this.btnNewOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewOrder.UseVisualStyleBackColor = false;
+            this.btnNewOrder.Click += new System.EventHandler(this.BtnNewOrder_Click);
             // 
-            // tblUserMain
+            // btnListOrders
             // 
-            this.tblUserMain.ColumnCount = 2;
-            this.tblUserMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tblUserMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tblUserMain.Controls.Add(this.tblMenu_tblUser, 0, 0);
-            this.tblUserMain.Controls.Add(this.pnlUser_pnlInterface, 1, 0);
-            this.tblUserMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblUserMain.Location = new System.Drawing.Point(0, 0);
-            this.tblUserMain.Name = "tblUserMain";
-            this.tblUserMain.RowCount = 1;
-            this.tblUserMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblUserMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 568F));
-            this.tblUserMain.Size = new System.Drawing.Size(1124, 568);
-            this.tblUserMain.TabIndex = 2;
+            this.btnListOrders.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnListOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnListOrders.FlatAppearance.BorderSize = 0;
+            this.btnListOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnListOrders.ForeColor = System.Drawing.Color.White;
+            this.btnListOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnListOrders.Image")));
+            this.btnListOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListOrders.Location = new System.Drawing.Point(5, 452);
+            this.btnListOrders.Margin = new System.Windows.Forms.Padding(5);
+            this.btnListOrders.Name = "btnListOrders";
+            this.btnListOrders.Size = new System.Drawing.Size(190, 57);
+            this.btnListOrders.TabIndex = 7;
+            this.btnListOrders.Text = "Edytuj";
+            this.btnListOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListOrders.UseVisualStyleBackColor = false;
+            this.btnListOrders.Click += new System.EventHandler(this.BtnListOrders_Click);
             // 
-            // tblMenu_tblUser
+            // btnNewService
             // 
-            this.tblMenu_tblUser.BackColor = System.Drawing.Color.Silver;
-            this.tblMenu_tblUser.ColumnCount = 1;
-            this.tblMenu_tblUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMenu_tblUser.Controls.Add(this.label3, 0, 4);
-            this.tblMenu_tblUser.Controls.Add(this.lblName, 0, 1);
-            this.tblMenu_tblUser.Controls.Add(this.lblSurname, 0, 2);
-            this.tblMenu_tblUser.Controls.Add(this.lblPermission, 0, 3);
-            this.tblMenu_tblUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMenu_tblUser.Location = new System.Drawing.Point(3, 3);
-            this.tblMenu_tblUser.Name = "tblMenu_tblUser";
-            this.tblMenu_tblUser.RowCount = 5;
-            this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tblMenu_tblUser.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblMenu_tblUser.Size = new System.Drawing.Size(364, 562);
-            this.tblMenu_tblUser.TabIndex = 1;
+            this.btnNewService.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNewService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNewService.FlatAppearance.BorderSize = 0;
+            this.btnNewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNewService.ForeColor = System.Drawing.Color.White;
+            this.btnNewService.Image = ((System.Drawing.Image)(resources.GetObject("btnNewService.Image")));
+            this.btnNewService.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewService.Location = new System.Drawing.Point(5, 519);
+            this.btnNewService.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNewService.Name = "btnNewService";
+            this.btnNewService.Size = new System.Drawing.Size(190, 57);
+            this.btnNewService.TabIndex = 8;
+            this.btnNewService.Text = "Utwórz";
+            this.btnNewService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewService.UseVisualStyleBackColor = false;
+            this.btnNewService.Click += new System.EventHandler(this.BtnNewService_Click);
             // 
-            // pnlUser_pnlInterface
+            // btnListServices
             // 
-            this.pnlUser_pnlInterface.Controls.Add(this.pnlUser_pnlListUsers);
-            this.pnlUser_pnlInterface.Controls.Add(this.pnlUser_pnlAddUser);
-            this.pnlUser_pnlInterface.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlUser_pnlInterface.Location = new System.Drawing.Point(373, 3);
-            this.pnlUser_pnlInterface.Name = "pnlUser_pnlInterface";
-            this.pnlUser_pnlInterface.Size = new System.Drawing.Size(748, 562);
-            this.pnlUser_pnlInterface.TabIndex = 2;
+            this.btnListServices.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnListServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnListServices.FlatAppearance.BorderSize = 0;
+            this.btnListServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnListServices.ForeColor = System.Drawing.Color.White;
+            this.btnListServices.Image = ((System.Drawing.Image)(resources.GetObject("btnListServices.Image")));
+            this.btnListServices.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListServices.Location = new System.Drawing.Point(5, 586);
+            this.btnListServices.Margin = new System.Windows.Forms.Padding(5);
+            this.btnListServices.Name = "btnListServices";
+            this.btnListServices.Size = new System.Drawing.Size(190, 57);
+            this.btnListServices.TabIndex = 9;
+            this.btnListServices.Text = "Pokaż";
+            this.btnListServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListServices.UseVisualStyleBackColor = false;
+            this.btnListServices.Click += new System.EventHandler(this.BtnListServices_Click);
             // 
-            // pnlUser_pnlListUsers
+            // btnNewEmployee
             // 
-            this.pnlUser_pnlListUsers.Controls.Add(this.flwUsers);
-            this.pnlUser_pnlListUsers.Location = new System.Drawing.Point(3, 5);
-            this.pnlUser_pnlListUsers.Name = "pnlUser_pnlListUsers";
-            this.pnlUser_pnlListUsers.Size = new System.Drawing.Size(260, 186);
-            this.pnlUser_pnlListUsers.TabIndex = 1;
+            this.btnNewEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNewEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNewEmployee.FlatAppearance.BorderSize = 0;
+            this.btnNewEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNewEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnNewEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnNewEmployee.Image")));
+            this.btnNewEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewEmployee.Location = new System.Drawing.Point(5, 653);
+            this.btnNewEmployee.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNewEmployee.Name = "btnNewEmployee";
+            this.btnNewEmployee.Size = new System.Drawing.Size(190, 57);
+            this.btnNewEmployee.TabIndex = 10;
+            this.btnNewEmployee.Text = "Dodaj";
+            this.btnNewEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewEmployee.UseVisualStyleBackColor = false;
+            this.btnNewEmployee.Click += new System.EventHandler(this.BtnNewEmployee_Click);
             // 
-            // flwUsers
+            // btnListEmployees
             // 
-            this.flwUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwUsers.Location = new System.Drawing.Point(0, 0);
-            this.flwUsers.Name = "flwUsers";
-            this.flwUsers.Size = new System.Drawing.Size(260, 186);
-            this.flwUsers.TabIndex = 0;
+            this.btnListEmployees.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnListEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnListEmployees.FlatAppearance.BorderSize = 0;
+            this.btnListEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnListEmployees.ForeColor = System.Drawing.Color.White;
+            this.btnListEmployees.Image = ((System.Drawing.Image)(resources.GetObject("btnListEmployees.Image")));
+            this.btnListEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListEmployees.Location = new System.Drawing.Point(5, 720);
+            this.btnListEmployees.Margin = new System.Windows.Forms.Padding(5);
+            this.btnListEmployees.Name = "btnListEmployees";
+            this.btnListEmployees.Size = new System.Drawing.Size(190, 57);
+            this.btnListEmployees.TabIndex = 11;
+            this.btnListEmployees.Text = "Pokaż";
+            this.btnListEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListEmployees.UseVisualStyleBackColor = false;
+            this.btnListEmployees.Click += new System.EventHandler(this.BtnListEmployees_Click);
             // 
-            // pnlUser_pnlAddUser
+            // pnlBasement
             // 
-            this.pnlUser_pnlAddUser.Location = new System.Drawing.Point(66, 109);
-            this.pnlUser_pnlAddUser.Name = "pnlUser_pnlAddUser";
-            this.pnlUser_pnlAddUser.Size = new System.Drawing.Size(200, 100);
-            this.pnlUser_pnlAddUser.TabIndex = 0;
+            this.pnlBasement.Controls.Add(this.pnlAddOrder);
+            this.pnlBasement.Controls.Add(this.pnlListOrders);
+            this.pnlBasement.Controls.Add(this.pnlListServices);
+            this.pnlBasement.Controls.Add(this.pnlDefault);
+            this.pnlBasement.Controls.Add(this.pnlAddService);
+            this.pnlBasement.Controls.Add(this.pnlListEmployees);
+            this.pnlBasement.Controls.Add(this.pnlAddEmployee);
+            this.pnlBasement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBasement.Location = new System.Drawing.Point(210, 0);
+            this.pnlBasement.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.pnlBasement.Name = "pnlBasement";
+            this.pnlBasement.Size = new System.Drawing.Size(1105, 503);
+            this.pnlBasement.TabIndex = 1;
             // 
-            // tblMenu
+            // pnlAddService
             // 
-            this.tblMenu.ColumnCount = 3;
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tblMenu.Controls.Add(this.flwBtnsDashboard, 0, 0);
-            this.tblMenu.Controls.Add(this.pnlMiddle, 1, 0);
-            this.tblMenu.Controls.Add(this.pnlRight, 2, 0);
-            this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMenu.Location = new System.Drawing.Point(0, 0);
-            this.tblMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.tblMenu.Name = "tblMenu";
-            this.tblMenu.RowCount = 1;
-            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tblMenu.Size = new System.Drawing.Size(1408, 50);
-            this.tblMenu.TabIndex = 3;
+            this.pnlAddService.BackColor = System.Drawing.Color.White;
+            this.pnlAddService.Controls.Add(this.panel1);
+            this.pnlAddService.Location = new System.Drawing.Point(0, 22);
+            this.pnlAddService.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddService.Name = "pnlAddService";
+            this.pnlAddService.Size = new System.Drawing.Size(1096, 465);
+            this.pnlAddService.TabIndex = 0;
             // 
-            // pnlMiddle
+            // panel1
             // 
-            this.pnlMiddle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMiddle.Location = new System.Drawing.Point(704, 0);
-            this.pnlMiddle.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMiddle.Name = "pnlMiddle";
-            this.pnlMiddle.Size = new System.Drawing.Size(140, 50);
-            this.pnlMiddle.TabIndex = 2;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.cmbCategory);
+            this.panel1.Controls.Add(this.picture);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.cmbUnit);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtDiscount);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtAmount);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtPrize);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.rtxtDescription);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Location = new System.Drawing.Point(184, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(713, 407);
+            this.panel1.TabIndex = 15;
             // 
-            // pnlRight
+            // picture
             // 
-            this.pnlRight.BackColor = System.Drawing.Color.Teal;
-            this.pnlRight.Controls.Add(this.lblTitle);
-            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRight.Location = new System.Drawing.Point(844, 0);
-            this.pnlRight.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(564, 50);
-            this.pnlRight.TabIndex = 3;
+            this.picture.Location = new System.Drawing.Point(23, 25);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(115, 101);
+            this.picture.TabIndex = 16;
+            this.picture.TabStop = false;
             // 
-            // lblTitle
+            // btnAdd
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(278, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(274, 23);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Leśna Polana Managment";
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.Location = new System.Drawing.Point(615, 25);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(64, 61);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // cntrlServiceAdd1
+            // lblName
             // 
-            this.cntrlServiceAdd1.AvaiableAmount = 0;
-            this.cntrlServiceAdd1.AvailableDiscount = 0F;
-            this.cntrlServiceAdd1.Category = null;
-            this.cntrlServiceAdd1.CriticalAmount = 0;
-            this.cntrlServiceAdd1.Description = null;
-            this.cntrlServiceAdd1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlServiceAdd1.Location = new System.Drawing.Point(0, 0);
-            this.cntrlServiceAdd1.Name = "cntrlServiceAdd1";
-            this.cntrlServiceAdd1.Prize = 0F;
-            this.cntrlServiceAdd1.ServiceName = null;
-            this.cntrlServiceAdd1.Size = new System.Drawing.Size(1402, 646);
-            this.cntrlServiceAdd1.TabIndex = 0;
-            this.cntrlServiceAdd1.Time = 0F;
-            this.cntrlServiceAdd1.Unit = null;
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblName.Location = new System.Drawing.Point(169, 25);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(71, 21);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Nazwa:";
             // 
-            // cntrlOrder1
+            // cmbUnit
             // 
-            this.cntrlOrder1.BackColor = System.Drawing.Color.White;
-            this.cntrlOrder1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlOrder1.Location = new System.Drawing.Point(0, 0);
-            this.cntrlOrder1.Name = "cntrlOrder1";
-            this.cntrlOrder1.Size = new System.Drawing.Size(1402, 646);
-            this.cntrlOrder1.TabIndex = 0;
+            this.cmbUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbUnit.FormattingEnabled = true;
+            this.cmbUnit.Items.AddRange(new object[] {
+            "porcja",
+            "sztuka",
+            "litr",
+            "kilogram",
+            "roboczogodzina",
+            "godzina"});
+            this.cmbUnit.Location = new System.Drawing.Point(271, 223);
+            this.cmbUnit.Name = "cmbUnit";
+            this.cmbUnit.Size = new System.Drawing.Size(316, 28);
+            this.cmbUnit.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(144, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Kategoria:";
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtDiscount.Location = new System.Drawing.Point(271, 348);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(316, 20);
+            this.txtDiscount.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(188, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Opis:";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtAmount.Location = new System.Drawing.Point(271, 309);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(316, 20);
+            this.txtAmount.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(144, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 21);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Jednostka:";
+            // 
+            // txtPrize
+            // 
+            this.txtPrize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrize.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPrize.Location = new System.Drawing.Point(271, 269);
+            this.txtPrize.Name = "txtPrize";
+            this.txtPrize.Size = new System.Drawing.Size(316, 20);
+            this.txtPrize.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(183, 268);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 21);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Cena:";
+            // 
+            // rtxtDescription
+            // 
+            this.rtxtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rtxtDescription.Location = new System.Drawing.Point(271, 107);
+            this.rtxtDescription.Name = "rtxtDescription";
+            this.rtxtDescription.Size = new System.Drawing.Size(316, 97);
+            this.rtxtDescription.TabIndex = 9;
+            this.rtxtDescription.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(187, 308);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 21);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Ilość:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(147, 348);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 21);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Promocja:";
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtName.Location = new System.Drawing.Point(271, 25);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(316, 20);
+            this.txtName.TabIndex = 7;
+            // 
+            // pnlInvitation
+            // 
+            this.pnlInvitation.Controls.Add(this.pictureBackground);
+            this.pnlInvitation.Controls.Add(this.pnlLogin);
+            this.pnlInvitation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInvitation.Location = new System.Drawing.Point(0, 0);
+            this.pnlInvitation.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlInvitation.Name = "pnlInvitation";
+            this.pnlInvitation.Size = new System.Drawing.Size(1315, 503);
+            this.pnlInvitation.TabIndex = 1;
+            // 
+            // pictureBackground
+            // 
+            this.pictureBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBackground.BackgroundImage")));
+            this.pictureBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBackground.Location = new System.Drawing.Point(0, 0);
+            this.pictureBackground.Name = "pictureBackground";
+            this.pictureBackground.Size = new System.Drawing.Size(1315, 503);
+            this.pictureBackground.TabIndex = 0;
+            this.pictureBackground.TabStop = false;
+            // 
+            // pnlLogin
+            // 
+            this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLogin.BackColor = System.Drawing.Color.Green;
+            this.pnlLogin.Controls.Add(this.btnExit);
+            this.pnlLogin.Controls.Add(this.btnLog);
+            this.pnlLogin.Controls.Add(this.txtPassword);
+            this.pnlLogin.Controls.Add(this.txtLogin);
+            this.pnlLogin.Controls.Add(this.label3);
+            this.pnlLogin.Controls.Add(this.label2);
+            this.pnlLogin.Controls.Add(this.pictureBox1);
+            this.pnlLogin.Controls.Add(this.label1);
+            this.pnlLogin.Location = new System.Drawing.Point(911, 141);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(392, 245);
+            this.pnlLogin.TabIndex = 15;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(302, 188);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(54, 51);
+            this.btnExit.TabIndex = 22;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnLog
+            // 
+            this.btnLog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLog.BackgroundImage")));
+            this.btnLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLog.FlatAppearance.BorderSize = 0;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Location = new System.Drawing.Point(114, 188);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(55, 51);
+            this.btnLog.TabIndex = 21;
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.BtnLog_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPassword.Location = new System.Drawing.Point(114, 153);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(242, 27);
+            this.txtPassword.TabIndex = 20;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLogin.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtLogin.Location = new System.Drawing.Point(114, 115);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(242, 27);
+            this.txtLogin.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(31, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 21);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Hasło";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(31, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 21);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Login";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 65);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Zaloguj się";
+            // 
+            // pnlDefault
+            // 
+            this.pnlDefault.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDefault.BackgroundImage")));
+            this.pnlDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlDefault.Controls.Add(this.lbl01);
+            this.pnlDefault.Location = new System.Drawing.Point(45, 27);
+            this.pnlDefault.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDefault.Name = "pnlDefault";
+            this.pnlDefault.Size = new System.Drawing.Size(1057, 473);
+            this.pnlDefault.TabIndex = 1;
+            // 
+            // lbl01
+            // 
+            this.lbl01.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl01.AutoSize = true;
+            this.lbl01.BackColor = System.Drawing.Color.Transparent;
+            this.lbl01.Font = new System.Drawing.Font("Lucida Sans Unicode", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl01.Location = new System.Drawing.Point(553, 214);
+            this.lbl01.Name = "lbl01";
+            this.lbl01.Size = new System.Drawing.Size(423, 34);
+            this.lbl01.TabIndex = 0;
+            this.lbl01.Text = "Leśna Polana Managment Tool";
+            this.lbl01.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlListServices
+            // 
+            this.pnlListServices.Controls.Add(this.tblListServices);
+            this.pnlListServices.Location = new System.Drawing.Point(24, 22);
+            this.pnlListServices.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListServices.Name = "pnlListServices";
+            this.pnlListServices.Size = new System.Drawing.Size(1069, 465);
+            this.pnlListServices.TabIndex = 2;
+            // 
+            // tblListServices
+            // 
+            this.tblListServices.ColumnCount = 1;
+            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblListServices.Controls.Add(this.flwListServices, 0, 1);
+            this.tblListServices.Controls.Add(this.pnlListServicesTop, 0, 0);
+            this.tblListServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblListServices.Location = new System.Drawing.Point(0, 0);
+            this.tblListServices.Name = "tblListServices";
+            this.tblListServices.RowCount = 2;
+            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListServices.Size = new System.Drawing.Size(1069, 465);
+            this.tblListServices.TabIndex = 0;
+            // 
+            // flwListServices
+            // 
+            this.flwListServices.AutoScroll = true;
+            this.flwListServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwListServices.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flwListServices.Location = new System.Drawing.Point(0, 60);
+            this.flwListServices.Margin = new System.Windows.Forms.Padding(0);
+            this.flwListServices.Name = "flwListServices";
+            this.flwListServices.Size = new System.Drawing.Size(1069, 405);
+            this.flwListServices.TabIndex = 0;
+            this.flwListServices.WrapContents = false;
+            // 
+            // pnlListServicesTop
+            // 
+            this.pnlListServicesTop.BackColor = System.Drawing.Color.Teal;
+            this.pnlListServicesTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListServicesTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlListServicesTop.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListServicesTop.Name = "pnlListServicesTop";
+            this.pnlListServicesTop.Size = new System.Drawing.Size(1069, 60);
+            this.pnlListServicesTop.TabIndex = 1;
+            // 
+            // pnlAddOrder
+            // 
+            this.pnlAddOrder.Controls.Add(this.cntrlListOrders);
+            this.pnlAddOrder.Location = new System.Drawing.Point(7, 22);
+            this.pnlAddOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddOrder.Name = "pnlAddOrder";
+            this.pnlAddOrder.Size = new System.Drawing.Size(1086, 462);
+            this.pnlAddOrder.TabIndex = 3;
+            // 
+            // pnlListOrders
+            // 
+            this.pnlListOrders.Location = new System.Drawing.Point(7, 5);
+            this.pnlListOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListOrders.Name = "pnlListOrders";
+            this.pnlListOrders.Size = new System.Drawing.Size(1095, 489);
+            this.pnlListOrders.TabIndex = 4;
+            // 
+            // pnlAddEmployee
+            // 
+            this.pnlAddEmployee.Location = new System.Drawing.Point(0, 5);
+            this.pnlAddEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddEmployee.Name = "pnlAddEmployee";
+            this.pnlAddEmployee.Size = new System.Drawing.Size(1074, 479);
+            this.pnlAddEmployee.TabIndex = 5;
+            // 
+            // pnlListEmployees
+            // 
+            this.pnlListEmployees.Location = new System.Drawing.Point(19, 5);
+            this.pnlListEmployees.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListEmployees.Name = "pnlListEmployees";
+            this.pnlListEmployees.Size = new System.Drawing.Size(1086, 437);
+            this.pnlListEmployees.TabIndex = 6;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Items.AddRange(new object[] {
+            "obiad",
+            "deser",
+            "zimna płyta",
+            "kolacja pierwsza",
+            "kolacja druga",
+            "kolacja na pożegnanie",
+            "zimne napoje",
+            "gorące napoje",
+            "alkohol",
+            "usługi weselne",
+            "grill",
+            "wellness",
+            "domki",
+            "inne usługi gastronomiczne",
+            "inne"});
+            this.cmbCategory.Location = new System.Drawing.Point(271, 62);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(316, 28);
+            this.cmbCategory.TabIndex = 8;
+            // 
+            // cntrlListOrders
+            // 
+            this.cntrlListOrders.BackColor = System.Drawing.Color.White;
+            this.cntrlListOrders.Location = new System.Drawing.Point(68, 23);
+            this.cntrlListOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.cntrlListOrders.Name = "cntrlListOrders";
+            this.cntrlListOrders.Size = new System.Drawing.Size(911, 434);
+            this.cntrlListOrders.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -540,7 +1011,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1408, 702);
+            this.ClientSize = new System.Drawing.Size(1315, 603);
             this.Controls.Add(this.tblDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Dashboard";
@@ -548,64 +1019,98 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.tblDashboard.ResumeLayout(false);
-            this.flwBtnsDashboard.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
+            this.flwTop.ResumeLayout(false);
+            this.pnlCompanyName.ResumeLayout(false);
+            this.pnlCompanyName.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
-            this.pnlOrder.ResumeLayout(false);
-            this.pnlOrder_pnlListOrders.ResumeLayout(false);
-            this.pnlOrder_pnlAddOrder.ResumeLayout(false);
-            this.pnlService.ResumeLayout(false);
-            this.pnlService_pnlAddService.ResumeLayout(false);
-            this.pnlService_pnlListServices.ResumeLayout(false);
-            this.pnlUser.ResumeLayout(false);
-            this.tblUserMain.ResumeLayout(false);
-            this.tblMenu_tblUser.ResumeLayout(false);
-            this.tblMenu_tblUser.PerformLayout();
-            this.pnlUser_pnlInterface.ResumeLayout(false);
-            this.pnlUser_pnlListUsers.ResumeLayout(false);
-            this.tblMenu.ResumeLayout(false);
-            this.pnlRight.ResumeLayout(false);
-            this.pnlRight.PerformLayout();
+            this.pnlProgram.ResumeLayout(false);
+            this.tblProgram.ResumeLayout(false);
+            this.flwOptions.ResumeLayout(false);
+            this.pnlBasement.ResumeLayout(false);
+            this.pnlAddService.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.pnlInvitation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBackground)).EndInit();
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlDefault.ResumeLayout(false);
+            this.pnlDefault.PerformLayout();
+            this.pnlListServices.ResumeLayout(false);
+            this.tblListServices.ResumeLayout(false);
+            this.pnlAddOrder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblPermission;
-        private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnService_ListServices;
-        private System.Windows.Forms.Button btnService;
-        private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Button btnService_NewService;
+
         private System.Windows.Forms.TableLayoutPanel tblDashboard;
-        private System.Windows.Forms.FlowLayoutPanel flwBtnsDashboard;
-        private System.Windows.Forms.TableLayoutPanel tblUserMain;
-        private System.Windows.Forms.TableLayoutPanel tblMenu_tblUser;
         private System.Windows.Forms.Panel pnlDashboard;
-        private System.Windows.Forms.Panel pnlUser;
-        private System.Windows.Forms.Panel pnlService;
-        private System.Windows.Forms.Button btnUser_NewUser;
-        private System.Windows.Forms.Button btnOrder_NewOrder;
-        private System.Windows.Forms.Button btnOrder_ListOrders;
-        private System.Windows.Forms.Button btnUser_ListUsers;
-        private System.Windows.Forms.Panel pnlUser_pnlInterface;
-        private System.Windows.Forms.Panel pnlUser_pnlListUsers;
-        private System.Windows.Forms.Panel pnlUser_pnlAddUser;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.FlowLayoutPanel flwUsers;
-        private System.Windows.Forms.Panel pnlOrder;
-        private System.Windows.Forms.Panel pnlService_pnlAddService;
-        private System.Windows.Forms.Panel pnlService_pnlListServices;
-        private System.Windows.Forms.Panel pnlOrder_pnlAddOrder;
-        private System.Windows.Forms.Panel pnlOrder_pnlListOrders;
-        private System.Windows.Forms.FlowLayoutPanel flwServices;
-        private CntrlServiceAdd cntrlServiceAdd1;
-        private System.Windows.Forms.TableLayoutPanel tblMenu;
-        private System.Windows.Forms.Panel pnlMiddle;
-        private System.Windows.Forms.Panel pnlRight;
-        private System.Windows.Forms.Label lblTitle;
-        private CntrlOrder cntrlOrder1;
+        private System.Windows.Forms.Panel pnlInvitation;
+        private System.Windows.Forms.FlowLayoutPanel flwTop;
+        private System.Windows.Forms.Panel pnlProgram;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Panel pnlCompanyName;
+        private System.Windows.Forms.PictureBox pictureAvatar;
+        private System.Windows.Forms.Label lblCompany;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pictureBackground;
+        private System.Windows.Forms.Panel pnlLogin;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLog;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.TableLayoutPanel tblProgram;
+        private System.Windows.Forms.FlowLayoutPanel flwOptions;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnService;
+        private System.Windows.Forms.Button btnPeaple;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnNewOrder;
+        private System.Windows.Forms.Button btnListOrders;
+        private System.Windows.Forms.Button btnNewService;
+        private System.Windows.Forms.Button btnListServices;
+        private System.Windows.Forms.Button btnNewEmployee;
+        private System.Windows.Forms.Button btnListEmployees;
+        private System.Windows.Forms.Panel pnlBasement;
+        private System.Windows.Forms.Panel pnlAddService;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtPrize;
+        private System.Windows.Forms.RichTextBox rtxtDescription;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cmbUnit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.Panel pnlDefault;
+        private System.Windows.Forms.Label lbl01;
+        private System.Windows.Forms.Panel pnlListServices;
+        private System.Windows.Forms.TableLayoutPanel tblListServices;
+        private System.Windows.Forms.FlowLayoutPanel flwListServices;
+        private System.Windows.Forms.Panel pnlListServicesTop;
+        private System.Windows.Forms.Panel pnlAddEmployee;
+        private System.Windows.Forms.Panel pnlListOrders;
+        private System.Windows.Forms.Panel pnlAddOrder;
+        private System.Windows.Forms.Panel pnlListEmployees;
+        private System.Windows.Forms.ComboBox cmbCategory;
+        private CntrlOrder cntrlListOrders;
     }
 }

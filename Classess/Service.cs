@@ -6,100 +6,28 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Drawing;
 using System.Data.SqlClient;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace ForestGladeApp.Classess
 {
-    class Service
+    public class Service
     {
-        private string connectionString = @"Data Source=GSZWEDPC\SQLEXPRESS;Initial Catalog=WeddingManagmentDB;Integrated Security=True";
+        [BsonId]
+        public Guid id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string category { get; set; }
+        public string unit { get; set; }
+        public double prize { get; set; }
+        public double discount { get; set; }
+        public double amount { get; set; }
+        public Image image { get; set; }
 
-        private int id;
-        private string Name;
-        public string Description { get; }
-        private string Category;
-        private string Unit;
-        private float Prize;
-        private float AvailableDiscount;
-        private int AvailableAmount;
-        private int CriticalAmount;
-        //private Image Image;
-        //private float Time;
-        public Service(string name)
+        public Service(string name, string category, string unit)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                var query = @"SELECT Category, Unit, Prize, AvailableDiscount, id, AvailableAmount, CriticalAmount FROM ServiceTable WHERE Name = '" + name + "'";
-                connection.Open();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                connection.Close();
-                DataTable tab = new DataTable();
-                dataAdapter.Fill(tab);
-                if (tab.Rows.Count > 0)
-                {
-                    DataRow row = tab.Rows[0];
-                    this.Category = (string)row[0];
-                    this.Unit = (string)row[1];
-                    this.Prize = Convert.ToSingle(row[2]);
-                    this.AvailableDiscount = Convert.ToSingle(row[3]);
-                    this.id = Convert.ToInt16(row[4]);
-                    this.AvailableAmount = Convert.ToInt16(row[5]);
-                    this.CriticalAmount = Convert.ToInt16(row[6]);
-                    this.Name = name;
-                }
-            }
-        }
-
-        public Service(int id)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                this.id = id;
-                var query = @"SELECT Name, Description, Category, Unit, Prize, AvailableDiscount, AvailableAmount, CriticalAmount FROM ServiceTable WHERE id = '" + id + "'";
-                connection.Open();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                connection.Close();
-                DataTable tab = new DataTable();
-                dataAdapter.Fill(tab);
-                if (tab.Rows.Count == 1)
-                {
-                    DataRow row = tab.Rows[0];
-                    this.Name = row[0].ToString();
-                    this.Description = row[1].ToString();
-                    this.Category = row[2].ToString();
-                    this.Unit = row[3].ToString();
-                    this.Prize = Convert.ToSingle(row[4]);
-                    this.AvailableDiscount = Convert.ToSingle(row[5]);
-                    this.AvailableAmount = Convert.ToInt16(row[6]);
-                    this.CriticalAmount = Convert.ToInt16(row[7]);
-                }
-            }
-        }
-
-        public string GetName()
-        {
-            return this.Name;
-        }
-        public string GetCategory()
-        {
-            return this.Category;
-        }
-        public float GetPrize()
-        {
-            return this.Prize;
-        }
-        public int GetId()
-        {
-            return this.id;
-        }
-
-        public int GetAmount()
-        {
-            return this.AvailableAmount;
-        }
-
-        public int GetCriticalAmount()
-        {
-            return this.CriticalAmount;
+            this.name = name;
+            this.category = category;
+            this.unit = unit;
         }
     }
 }

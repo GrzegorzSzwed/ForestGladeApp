@@ -33,8 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.2.0\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.8.0\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.8.0\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.8.0\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,8 +66,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classess\Customer.cs" />
-    <Compile Include="Classess\Employee.cs" />
+    <Compile Include="Classess\PersonModel.cs" />
+    <Compile Include="Classess\MongoCRUD.cs" />
     <Compile Include="Classess\Order.cs" />
     <Compile Include="Classess\Service.cs" />
     <Compile Include="Forms\CntrlOrder.cs">
@@ -56,73 +76,28 @@
     <Compile Include="Forms\CntrlOrder.Designer.cs">
       <DependentUpon>CntrlOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CntrlService.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CntrlService.Designer.cs">
-      <DependentUpon>CntrlService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CntrlServiceAdd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CntrlServiceAdd.Designer.cs">
-      <DependentUpon>CntrlServiceAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CntrlServiceList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CntrlServiceList.Designer.cs">
-      <DependentUpon>CntrlServiceList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CntrlTimeLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CntrlTimeLine.Designer.cs">
-      <DependentUpon>CntrlTimeLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CntrlUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CntrlUser.Designer.cs">
-      <DependentUpon>CntrlUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EntryForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\ServiceCntrl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\EntryForm.Designer.cs">
-      <DependentUpon>EntryForm.cs</DependentUpon>
+    <Compile Include="Forms\ServiceCntrl.Designer.cs">
+      <DependentUpon>ServiceCntrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CntrlOrder.resx">
       <DependentUpon>CntrlOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CntrlService.resx">
-      <DependentUpon>CntrlService.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CntrlServiceAdd.resx">
-      <DependentUpon>CntrlServiceAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CntrlServiceList.resx">
-      <DependentUpon>CntrlServiceList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CntrlTimeLine.resx">
-      <DependentUpon>CntrlTimeLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CntrlUser.resx">
-      <DependentUpon>CntrlUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EntryForm.resx">
-      <DependentUpon>EntryForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ServiceCntrl.resx">
+      <DependentUpon>ServiceCntrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +108,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
