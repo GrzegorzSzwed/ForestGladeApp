@@ -267,33 +267,6 @@ namespace ForestGladeApp.Forms
             ProgramPanels[6].BringToFront();
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            if (txtName.Text != string.Empty && cmbCategory.Text != string.Empty && cmbUnit.Text != string.Empty)
-            {
-                Service service = new Service(txtName.Text, cmbCategory.Text, cmbUnit.Text);
-                service.prize = Convert.ToDouble(txtPrize.Text);
-                service.description = rtxtDescription.Text;
-                if(txtAmount.Text!=string.Empty)
-                    service.amount = Convert.ToDouble(txtAmount.Text);
-                if(txtDiscount.Text!=string.Empty)
-                    service.discount = Convert.ToDouble(txtDiscount.Text);
-                service.image = picture.Image;
-
-                MongoCRUD mongo = new MongoCRUD("ForestGladeDB");
-                mongo.InsertRecord("services", service);
-                MessageBox.Show("Dodano nową usługę");
-
-                txtAmount.Text = string.Empty;
-                cmbCategory.Text = string.Empty;
-                txtDiscount.Text = string.Empty;
-                txtPrize.Text = string.Empty;
-                cmbUnit.Text = string.Empty;
-                rtxtDescription.Text = string.Empty;
-            }
-        }
-
         #endregion
-
     }
 }

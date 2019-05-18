@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classess\Ingredient.cs" />
     <Compile Include="Classess\PersonModel.cs" />
     <Compile Include="Classess\MongoCRUD.cs" />
     <Compile Include="Classess\Order.cs" />
@@ -82,11 +83,29 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IngredientCntrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\IngredientCntrl.Designer.cs">
+      <DependentUpon>IngredientCntrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IngredientCntrlNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\IngredientCntrlNew.Designer.cs">
+      <DependentUpon>IngredientCntrlNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ServiceCntrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\ServiceCntrl.Designer.cs">
       <DependentUpon>ServiceCntrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceCntrlMngmt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceCntrlMngmt.Designer.cs">
+      <DependentUpon>ServiceCntrlMngmt.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,8 +115,17 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IngredientCntrl.resx">
+      <DependentUpon>IngredientCntrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IngredientCntrlNew.resx">
+      <DependentUpon>IngredientCntrlNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceCntrl.resx">
       <DependentUpon>ServiceCntrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceCntrlMngmt.resx">
+      <DependentUpon>ServiceCntrlMngmt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -114,7 +114,10 @@ A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\MongoDB
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\MongoDB.Driver.xml
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\MongoDB.Driver.Core.xml
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\bin\Debug\System.Buffers.xml
-A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csprojAssemblyReference.cache
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.exe.config
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csproj.CopyComplete
 A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.ServiceCntrl.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.IngredientCntrl.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.IngredientCntrlNew.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.Forms.ServiceCntrlMngmt.resources
+A:\Pulpit\Library\LesnaPolanaApp\ForestGladeApp\ForestGladeApp\obj\Debug\ForestGladeApp.csprojAssemblyReference.cache

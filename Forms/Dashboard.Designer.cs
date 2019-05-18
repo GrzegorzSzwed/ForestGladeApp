@@ -53,22 +53,16 @@
             this.btnListEmployees = new System.Windows.Forms.Button();
             this.pnlBasement = new System.Windows.Forms.Panel();
             this.pnlAddService = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.picture = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
-            this.cmbUnit = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPrize = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.pnlListEmployees = new System.Windows.Forms.Panel();
+            this.pnlAddEmployee = new System.Windows.Forms.Panel();
+            this.pnlAddOrder = new System.Windows.Forms.Panel();
+            this.pnlListOrders = new System.Windows.Forms.Panel();
+            this.pnlListServices = new System.Windows.Forms.Panel();
+            this.tblListServices = new System.Windows.Forms.TableLayoutPanel();
+            this.flwListServices = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlListServicesTop = new System.Windows.Forms.Panel();
+            this.pnlDefault = new System.Windows.Forms.Panel();
+            this.lbl01 = new System.Windows.Forms.Label();
             this.pnlInvitation = new System.Windows.Forms.Panel();
             this.pictureBackground = new System.Windows.Forms.PictureBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
@@ -80,18 +74,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlDefault = new System.Windows.Forms.Panel();
-            this.lbl01 = new System.Windows.Forms.Label();
-            this.pnlListServices = new System.Windows.Forms.Panel();
-            this.tblListServices = new System.Windows.Forms.TableLayoutPanel();
-            this.flwListServices = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlListServicesTop = new System.Windows.Forms.Panel();
-            this.pnlAddOrder = new System.Windows.Forms.Panel();
-            this.pnlListOrders = new System.Windows.Forms.Panel();
-            this.pnlAddEmployee = new System.Windows.Forms.Panel();
-            this.pnlListEmployees = new System.Windows.Forms.Panel();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.cntrlListOrders = new ForestGladeApp.Forms.CntrlOrder();
+            this.serviceCntrlMngmt1 = new ForestGladeApp.Forms.ServiceCntrlMngmt();
             this.tblDashboard.SuspendLayout();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
@@ -103,16 +87,14 @@
             this.flwOptions.SuspendLayout();
             this.pnlBasement.SuspendLayout();
             this.pnlAddService.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.pnlAddOrder.SuspendLayout();
+            this.pnlListServices.SuspendLayout();
+            this.tblListServices.SuspendLayout();
+            this.pnlDefault.SuspendLayout();
             this.pnlInvitation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBackground)).BeginInit();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlDefault.SuspendLayout();
-            this.pnlListServices.SuspendLayout();
-            this.tblListServices.SuspendLayout();
-            this.pnlAddOrder.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblDashboard
@@ -495,13 +477,13 @@
             // 
             // pnlBasement
             // 
+            this.pnlBasement.Controls.Add(this.pnlAddService);
+            this.pnlBasement.Controls.Add(this.pnlListEmployees);
+            this.pnlBasement.Controls.Add(this.pnlAddEmployee);
             this.pnlBasement.Controls.Add(this.pnlAddOrder);
             this.pnlBasement.Controls.Add(this.pnlListOrders);
             this.pnlBasement.Controls.Add(this.pnlListServices);
             this.pnlBasement.Controls.Add(this.pnlDefault);
-            this.pnlBasement.Controls.Add(this.pnlAddService);
-            this.pnlBasement.Controls.Add(this.pnlListEmployees);
-            this.pnlBasement.Controls.Add(this.pnlAddEmployee);
             this.pnlBasement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBasement.Location = new System.Drawing.Point(210, 0);
             this.pnlBasement.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -512,231 +494,116 @@
             // pnlAddService
             // 
             this.pnlAddService.BackColor = System.Drawing.Color.White;
-            this.pnlAddService.Controls.Add(this.panel1);
+            this.pnlAddService.Controls.Add(this.serviceCntrlMngmt1);
             this.pnlAddService.Location = new System.Drawing.Point(0, 22);
             this.pnlAddService.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAddService.Name = "pnlAddService";
             this.pnlAddService.Size = new System.Drawing.Size(1096, 465);
             this.pnlAddService.TabIndex = 0;
             // 
-            // panel1
+            // pnlListEmployees
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.cmbCategory);
-            this.panel1.Controls.Add(this.picture);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.cmbUnit);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtDiscount);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtAmount);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtPrize);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.rtxtDescription);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Location = new System.Drawing.Point(184, 23);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 407);
-            this.panel1.TabIndex = 15;
+            this.pnlListEmployees.Location = new System.Drawing.Point(19, 5);
+            this.pnlListEmployees.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListEmployees.Name = "pnlListEmployees";
+            this.pnlListEmployees.Size = new System.Drawing.Size(1086, 437);
+            this.pnlListEmployees.TabIndex = 6;
             // 
-            // picture
+            // pnlAddEmployee
             // 
-            this.picture.Location = new System.Drawing.Point(23, 25);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(115, 101);
-            this.picture.TabIndex = 16;
-            this.picture.TabStop = false;
+            this.pnlAddEmployee.Location = new System.Drawing.Point(0, 5);
+            this.pnlAddEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddEmployee.Name = "pnlAddEmployee";
+            this.pnlAddEmployee.Size = new System.Drawing.Size(1074, 479);
+            this.pnlAddEmployee.TabIndex = 5;
             // 
-            // btnAdd
+            // pnlAddOrder
             // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.Location = new System.Drawing.Point(615, 25);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(64, 61);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.pnlAddOrder.Controls.Add(this.cntrlListOrders);
+            this.pnlAddOrder.Location = new System.Drawing.Point(7, 22);
+            this.pnlAddOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAddOrder.Name = "pnlAddOrder";
+            this.pnlAddOrder.Size = new System.Drawing.Size(1086, 462);
+            this.pnlAddOrder.TabIndex = 3;
             // 
-            // lblName
+            // pnlListOrders
             // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblName.Location = new System.Drawing.Point(169, 25);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(71, 21);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Nazwa:";
+            this.pnlListOrders.Location = new System.Drawing.Point(7, 5);
+            this.pnlListOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListOrders.Name = "pnlListOrders";
+            this.pnlListOrders.Size = new System.Drawing.Size(1095, 489);
+            this.pnlListOrders.TabIndex = 4;
             // 
-            // cmbUnit
+            // pnlListServices
             // 
-            this.cmbUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cmbUnit.FormattingEnabled = true;
-            this.cmbUnit.Items.AddRange(new object[] {
-            "porcja",
-            "sztuka",
-            "litr",
-            "kilogram",
-            "roboczogodzina",
-            "godzina"});
-            this.cmbUnit.Location = new System.Drawing.Point(271, 223);
-            this.cmbUnit.Name = "cmbUnit";
-            this.cmbUnit.Size = new System.Drawing.Size(316, 28);
-            this.cmbUnit.TabIndex = 10;
+            this.pnlListServices.Controls.Add(this.tblListServices);
+            this.pnlListServices.Location = new System.Drawing.Point(24, 22);
+            this.pnlListServices.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListServices.Name = "pnlListServices";
+            this.pnlListServices.Size = new System.Drawing.Size(1069, 465);
+            this.pnlListServices.TabIndex = 2;
             // 
-            // label4
+            // tblListServices
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(144, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Kategoria:";
+            this.tblListServices.ColumnCount = 1;
+            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblListServices.Controls.Add(this.flwListServices, 0, 1);
+            this.tblListServices.Controls.Add(this.pnlListServicesTop, 0, 0);
+            this.tblListServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblListServices.Location = new System.Drawing.Point(0, 0);
+            this.tblListServices.Name = "tblListServices";
+            this.tblListServices.RowCount = 2;
+            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListServices.Size = new System.Drawing.Size(1069, 465);
+            this.tblListServices.TabIndex = 0;
             // 
-            // txtDiscount
+            // flwListServices
             // 
-            this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtDiscount.Location = new System.Drawing.Point(271, 348);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(316, 20);
-            this.txtDiscount.TabIndex = 13;
+            this.flwListServices.AutoScroll = true;
+            this.flwListServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwListServices.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flwListServices.Location = new System.Drawing.Point(0, 60);
+            this.flwListServices.Margin = new System.Windows.Forms.Padding(0);
+            this.flwListServices.Name = "flwListServices";
+            this.flwListServices.Size = new System.Drawing.Size(1069, 405);
+            this.flwListServices.TabIndex = 0;
+            this.flwListServices.WrapContents = false;
             // 
-            // label5
+            // pnlListServicesTop
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(188, 105);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Opis:";
+            this.pnlListServicesTop.BackColor = System.Drawing.Color.Teal;
+            this.pnlListServicesTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListServicesTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlListServicesTop.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlListServicesTop.Name = "pnlListServicesTop";
+            this.pnlListServicesTop.Size = new System.Drawing.Size(1069, 60);
+            this.pnlListServicesTop.TabIndex = 1;
             // 
-            // txtAmount
+            // pnlDefault
             // 
-            this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtAmount.Location = new System.Drawing.Point(271, 309);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(316, 20);
-            this.txtAmount.TabIndex = 12;
+            this.pnlDefault.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDefault.BackgroundImage")));
+            this.pnlDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlDefault.Controls.Add(this.lbl01);
+            this.pnlDefault.Location = new System.Drawing.Point(45, 27);
+            this.pnlDefault.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDefault.Name = "pnlDefault";
+            this.pnlDefault.Size = new System.Drawing.Size(1057, 473);
+            this.pnlDefault.TabIndex = 1;
             // 
-            // label6
+            // lbl01
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(144, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 21);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Jednostka:";
-            // 
-            // txtPrize
-            // 
-            this.txtPrize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrize.Location = new System.Drawing.Point(271, 269);
-            this.txtPrize.Name = "txtPrize";
-            this.txtPrize.Size = new System.Drawing.Size(316, 20);
-            this.txtPrize.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(183, 268);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 21);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Cena:";
-            // 
-            // rtxtDescription
-            // 
-            this.rtxtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rtxtDescription.Location = new System.Drawing.Point(271, 107);
-            this.rtxtDescription.Name = "rtxtDescription";
-            this.rtxtDescription.Size = new System.Drawing.Size(316, 97);
-            this.rtxtDescription.TabIndex = 9;
-            this.rtxtDescription.Text = "";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(187, 308);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 21);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Ilość:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(147, 348);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 21);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Promocja:";
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtName.Location = new System.Drawing.Point(271, 25);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(316, 20);
-            this.txtName.TabIndex = 7;
+            this.lbl01.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl01.AutoSize = true;
+            this.lbl01.BackColor = System.Drawing.Color.Transparent;
+            this.lbl01.Font = new System.Drawing.Font("Lucida Sans Unicode", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl01.Location = new System.Drawing.Point(553, 214);
+            this.lbl01.Name = "lbl01";
+            this.lbl01.Size = new System.Drawing.Size(423, 34);
+            this.lbl01.TabIndex = 0;
+            this.lbl01.Text = "Leśna Polana Managment Tool";
+            this.lbl01.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlInvitation
             // 
@@ -864,138 +731,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Zaloguj się";
             // 
-            // pnlDefault
-            // 
-            this.pnlDefault.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDefault.BackgroundImage")));
-            this.pnlDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlDefault.Controls.Add(this.lbl01);
-            this.pnlDefault.Location = new System.Drawing.Point(45, 27);
-            this.pnlDefault.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlDefault.Name = "pnlDefault";
-            this.pnlDefault.Size = new System.Drawing.Size(1057, 473);
-            this.pnlDefault.TabIndex = 1;
-            // 
-            // lbl01
-            // 
-            this.lbl01.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl01.AutoSize = true;
-            this.lbl01.BackColor = System.Drawing.Color.Transparent;
-            this.lbl01.Font = new System.Drawing.Font("Lucida Sans Unicode", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl01.Location = new System.Drawing.Point(553, 214);
-            this.lbl01.Name = "lbl01";
-            this.lbl01.Size = new System.Drawing.Size(423, 34);
-            this.lbl01.TabIndex = 0;
-            this.lbl01.Text = "Leśna Polana Managment Tool";
-            this.lbl01.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlListServices
-            // 
-            this.pnlListServices.Controls.Add(this.tblListServices);
-            this.pnlListServices.Location = new System.Drawing.Point(24, 22);
-            this.pnlListServices.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlListServices.Name = "pnlListServices";
-            this.pnlListServices.Size = new System.Drawing.Size(1069, 465);
-            this.pnlListServices.TabIndex = 2;
-            // 
-            // tblListServices
-            // 
-            this.tblListServices.ColumnCount = 1;
-            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblListServices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblListServices.Controls.Add(this.flwListServices, 0, 1);
-            this.tblListServices.Controls.Add(this.pnlListServicesTop, 0, 0);
-            this.tblListServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblListServices.Location = new System.Drawing.Point(0, 0);
-            this.tblListServices.Name = "tblListServices";
-            this.tblListServices.RowCount = 2;
-            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblListServices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblListServices.Size = new System.Drawing.Size(1069, 465);
-            this.tblListServices.TabIndex = 0;
-            // 
-            // flwListServices
-            // 
-            this.flwListServices.AutoScroll = true;
-            this.flwListServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwListServices.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flwListServices.Location = new System.Drawing.Point(0, 60);
-            this.flwListServices.Margin = new System.Windows.Forms.Padding(0);
-            this.flwListServices.Name = "flwListServices";
-            this.flwListServices.Size = new System.Drawing.Size(1069, 405);
-            this.flwListServices.TabIndex = 0;
-            this.flwListServices.WrapContents = false;
-            // 
-            // pnlListServicesTop
-            // 
-            this.pnlListServicesTop.BackColor = System.Drawing.Color.Teal;
-            this.pnlListServicesTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListServicesTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlListServicesTop.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlListServicesTop.Name = "pnlListServicesTop";
-            this.pnlListServicesTop.Size = new System.Drawing.Size(1069, 60);
-            this.pnlListServicesTop.TabIndex = 1;
-            // 
-            // pnlAddOrder
-            // 
-            this.pnlAddOrder.Controls.Add(this.cntrlListOrders);
-            this.pnlAddOrder.Location = new System.Drawing.Point(7, 22);
-            this.pnlAddOrder.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAddOrder.Name = "pnlAddOrder";
-            this.pnlAddOrder.Size = new System.Drawing.Size(1086, 462);
-            this.pnlAddOrder.TabIndex = 3;
-            // 
-            // pnlListOrders
-            // 
-            this.pnlListOrders.Location = new System.Drawing.Point(7, 5);
-            this.pnlListOrders.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlListOrders.Name = "pnlListOrders";
-            this.pnlListOrders.Size = new System.Drawing.Size(1095, 489);
-            this.pnlListOrders.TabIndex = 4;
-            // 
-            // pnlAddEmployee
-            // 
-            this.pnlAddEmployee.Location = new System.Drawing.Point(0, 5);
-            this.pnlAddEmployee.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAddEmployee.Name = "pnlAddEmployee";
-            this.pnlAddEmployee.Size = new System.Drawing.Size(1074, 479);
-            this.pnlAddEmployee.TabIndex = 5;
-            // 
-            // pnlListEmployees
-            // 
-            this.pnlListEmployees.Location = new System.Drawing.Point(19, 5);
-            this.pnlListEmployees.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlListEmployees.Name = "pnlListEmployees";
-            this.pnlListEmployees.Size = new System.Drawing.Size(1086, 437);
-            this.pnlListEmployees.TabIndex = 6;
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Items.AddRange(new object[] {
-            "obiad",
-            "deser",
-            "zimna płyta",
-            "kolacja pierwsza",
-            "kolacja druga",
-            "kolacja na pożegnanie",
-            "zimne napoje",
-            "gorące napoje",
-            "alkohol",
-            "usługi weselne",
-            "grill",
-            "wellness",
-            "domki",
-            "inne usługi gastronomiczne",
-            "inne"});
-            this.cmbCategory.Location = new System.Drawing.Point(271, 62);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(316, 28);
-            this.cmbCategory.TabIndex = 8;
-            // 
             // cntrlListOrders
             // 
             this.cntrlListOrders.BackColor = System.Drawing.Color.White;
@@ -1004,6 +739,16 @@
             this.cntrlListOrders.Name = "cntrlListOrders";
             this.cntrlListOrders.Size = new System.Drawing.Size(911, 434);
             this.cntrlListOrders.TabIndex = 0;
+            // 
+            // serviceCntrlMngmt1
+            // 
+            this.serviceCntrlMngmt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.serviceCntrlMngmt1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.serviceCntrlMngmt1.Location = new System.Drawing.Point(0, 0);
+            this.serviceCntrlMngmt1.Margin = new System.Windows.Forms.Padding(0);
+            this.serviceCntrlMngmt1.Name = "serviceCntrlMngmt1";
+            this.serviceCntrlMngmt1.Size = new System.Drawing.Size(1096, 465);
+            this.serviceCntrlMngmt1.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -1030,19 +775,16 @@
             this.flwOptions.ResumeLayout(false);
             this.pnlBasement.ResumeLayout(false);
             this.pnlAddService.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.pnlAddOrder.ResumeLayout(false);
+            this.pnlListServices.ResumeLayout(false);
+            this.tblListServices.ResumeLayout(false);
+            this.pnlDefault.ResumeLayout(false);
+            this.pnlDefault.PerformLayout();
             this.pnlInvitation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBackground)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlDefault.ResumeLayout(false);
-            this.pnlDefault.PerformLayout();
-            this.pnlListServices.ResumeLayout(false);
-            this.tblListServices.ResumeLayout(false);
-            this.pnlAddOrder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1084,22 +826,6 @@
         private System.Windows.Forms.Button btnListEmployees;
         private System.Windows.Forms.Panel pnlBasement;
         private System.Windows.Forms.Panel pnlAddService;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtDiscount;
-        private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.TextBox txtPrize;
-        private System.Windows.Forms.RichTextBox rtxtDescription;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbUnit;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Panel pnlDefault;
         private System.Windows.Forms.Label lbl01;
         private System.Windows.Forms.Panel pnlListServices;
@@ -1110,7 +836,7 @@
         private System.Windows.Forms.Panel pnlListOrders;
         private System.Windows.Forms.Panel pnlAddOrder;
         private System.Windows.Forms.Panel pnlListEmployees;
-        private System.Windows.Forms.ComboBox cmbCategory;
         private CntrlOrder cntrlListOrders;
+        private ServiceCntrlMngmt serviceCntrlMngmt1;
     }
 }

@@ -74,5 +74,13 @@ namespace ForestGladeApp.Classess
 
             return collection.Find(filter).First();
         }
+
+        public T LoadRecordByName<T>(string table, string name)
+        {
+            var collection = db.GetCollection<T>(table);
+            var filter = "{ name : '" + name + '}';
+
+            return collection.Find(filter).First();
+        }
     }
 }

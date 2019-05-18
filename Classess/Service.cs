@@ -23,11 +23,18 @@ namespace ForestGladeApp.Classess
         public double amount { get; set; }
         public Image image { get; set; }
 
+        public Dictionary<Ingredient, double> ingredients;
+
         public Service(string name, string category, string unit)
         {
             this.name = name;
             this.category = category;
             this.unit = unit;
+        }
+
+        public Service(string name, string category, string unit, Dictionary<Ingredient,double> ingredients):this(name,category, unit)
+        {
+            ingredients = new Dictionary<Ingredient, double>(ingredients);
         }
     }
 }
