@@ -22,7 +22,8 @@ namespace ForestGladeApp.Forms
             txtPrize.Text = "Cena [zł]";
             _alergic = new List<string>();
             _nutriens = new Dictionary<string, double>();
-            _nutriens["protein"] = 0;
+            _nutriens["calories"] = 0;
+            _nutriens["proteins"] = 0;
             _nutriens["fat"] = 0;
             _nutriens["carbohydrates"] = 0;
         }
@@ -51,7 +52,7 @@ namespace ForestGladeApp.Forms
             get { return _name; }
             set { _name = value; }
         }
-
+        #region Events
         private void TxtName_TextChanged(object sender, EventArgs e)
         {
             IngredientName = txtName.Text; 
@@ -64,14 +65,40 @@ namespace ForestGladeApp.Forms
 
         private void TxtPrize_TextChanged(object sender, EventArgs e)
         {
-            string prize = txtPrize.Text.Replace(',', '.');
-            try
+            if(txtPrize.Text != string.Empty && txtPrize.Text != "niepoprawny format")
             {
-                Prize = Convert.ToDouble(prize);
-            }
-            catch
-            {
-                txtPrize.Text = "Niepoprawny format";
+                var numbers = 0;
+                var dots = 0;
+                var other = 0;
+                var prize = txtPrize.Text;
+                foreach(var c in prize)
+                {
+                    if (Char.IsNumber(c))
+                        numbers++;
+                    else
+                        if (Char.IsPunctuation(c))
+                        dots++;
+                    else
+                        other++;
+                }
+                if(numbers == prize.Length || numbers == prize.Length - 1)
+                {
+                    try
+                    {
+                        Prize = Convert.ToDouble(prize);
+                    }
+                    catch
+                    {
+                        if (dots == 1)
+                        {
+                            prize = prize.Replace('.', ',');
+                            Prize = Convert.ToDouble(prize);
+                        }
+                        else
+                            txtPrize.Text = "nieprawidlowy format";
+                    }
+                }
+
             }
 
         }
@@ -91,7 +118,7 @@ namespace ForestGladeApp.Forms
         {
             try
             {
-                string protein = txtProtein.Text.Replace(',', '.');
+                string protein = txtProtein.Text.Replace('.', ',');
                 double amount = Convert.ToDouble(protein);
                 if (amount <= 100 && amount >= 0)
                     _nutriens["proteins"] = Convert.ToDouble(amount);
@@ -108,7 +135,7 @@ namespace ForestGladeApp.Forms
         {
             try
             {
-                string fat = txtFat.Text.Replace(',', '.');
+                string fat = txtFat.Text.Replace('.', ',');
                 double amount = Convert.ToDouble(fat);
                 if (amount <= 100 && amount >= 0)
                     _nutriens["fat"] = Convert.ToDouble(amount);
@@ -125,7 +152,7 @@ namespace ForestGladeApp.Forms
         {
             try
             {
-                string carbs = txtCarbs.Text.Replace(',', '.');
+                string carbs = txtCarbs.Text.Replace('.', ',');
                 double amount = Convert.ToDouble(carbs);
                 if (amount <= 100 && amount >= 0)
                     _nutriens["carbohydrates"] = Convert.ToDouble(amount);
@@ -148,9 +175,76 @@ namespace ForestGladeApp.Forms
                 if (_alergic.Count != 0)
                     ingredient.alergic = _alergic;
 
-                    ingredient.nutriens = _nutriens;
-                    ingredient.AddToDb(mongo);
+                ingredient.nutriens = _nutriens;
+                try
+                {
+                    mongo.InsertRecord<Ingredient>("ingredients", ingredient);
+                    btnNewIngredient.BackColor = Color.LightGreen;
+                }
+                catch
+                {
+                    MessageBox.Show("Produt o takiej samej nazwie istnieje w bazie");
+                    btnNewIngredient.BackColor = Color.Red;
+                }
+
             }
         }
+
+        private void TxtCalories_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string calories = txtCalories.Text.Replace('.', ',');
+                double amount = Convert.ToDouble(calories);
+                if (amount <= 2000 && amount >= 0)
+                    _nutriens["calories"] = Convert.ToDouble(amount);
+                else
+                    txtFat.Text = "Nielogiczne dane";
+            }
+            catch
+            {
+                txtFat.Text = "Zły format";
+            }
+        }
+
+        private void TxtName_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtName.Text = string.Empty;
+        }
+
+        private void TxtUnit_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUnit.Text = string.Empty;
+        }
+
+        private void TxtPrize_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPrize.Text = string.Empty;
+        }
+
+        private void TxtProtein_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtProtein.Text = string.Empty;
+        }
+
+        private void TxtFat_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtFat.Text = string.Empty;
+        }
+
+        private void TxtCarbs_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtCarbs.Text = string.Empty;
+        }
+
+
+        private void TxtCalories_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtCalories.Text = string.Empty;
+        }
+
+        #endregion
+
+
     }
 }

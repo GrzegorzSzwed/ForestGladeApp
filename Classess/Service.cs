@@ -19,6 +19,7 @@ namespace ForestGladeApp.Classess
         public string category { get; set; }
         public string unit { get; set; }
         public double prize { get; set; }
+        public double costOfIngredients { get; set; }
         public double discount { get; set; }
         public double amount { get; set; }
         public Image image { get; set; }
@@ -34,7 +35,28 @@ namespace ForestGladeApp.Classess
 
         public Service(string name, string category, string unit, Dictionary<Ingredient,double> ingredients):this(name,category, unit)
         {
-            ingredients = new Dictionary<Ingredient, double>(ingredients);
+            this.ingredients = new Dictionary<Ingredient, double>(ingredients);
+        }
+
+        public void CountCostOfIngredients()
+        {
+            if (ingredients!=null)
+            {
+                double prize = 0;
+                foreach (var ing in ingredients)
+                {
+                    prize = prize + ing.Key.prize * ing.Value;
+                }
+                if (prize >= 0)
+                    costOfIngredients = prize;
+                else
+                    prize = 0;
+            }
+        }
+
+        public void SetIngredients(Dictionary<Ingredient,double> ingredients)
+        {
+            this.ingredients = new Dictionary<Ingredient, double>(ingredients);
         }
     }
 }

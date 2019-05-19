@@ -38,31 +38,36 @@ namespace ForestGladeApp.Forms
         private void TblLayout_MouseEnter(object sender, EventArgs e)
         {
             tblLayout.BackColor = Color.LightGray;
-            txtCount.Text = "ilość";
         }
         private void TblLayout_MouseLeave(object sender, EventArgs e)
         {
             tblLayout.BackColor = Color.White;
-            txtCount.Text = string.Empty;
         }
         private void TxtCount_Click(object sender, EventArgs e)
         {
             txtCount.Text = string.Empty;
         }
-        private void TxtCount_Leave(object sender, EventArgs e)
+
+
+        private void TxtCount_MouseEnter(object sender, EventArgs e)
+        {
+            txtCount.Text = Amount.ToString();
+        }
+
+        private void TxtCount_MouseLeave(object sender, EventArgs e)
         {
             int numbers = 0;
             int other = 0;
-            if(txtCount.Text != string.Empty && txtCount.Text != "Wrong type")
+            if (txtCount.Text != string.Empty && txtCount.Text != "Wrong type")
             {
                 foreach (char c in txtCount.Text)
                 {
-                    if (!Char.IsWhiteSpace(c)&!Char.IsSeparator(c))
+                    if (!Char.IsWhiteSpace(c) & !Char.IsPunctuation(c))
                     {
-                            if (Char.IsNumber(c))
-                                numbers++;
-                            else
-                                other++;
+                        if (Char.IsNumber(c))
+                            numbers++;
+                        else
+                            other++;
                     }
                 }
                 if (other != 0)
@@ -70,11 +75,12 @@ namespace ForestGladeApp.Forms
                 else
                 {
                     string count = txtCount.Text;
-                    count.Replace(',', '.');
+                    //doesnt work for now count.Replace('.', ',');
                     Amount = Convert.ToDouble(count);
                 }
             }
         }
+
         #endregion
     }
 }

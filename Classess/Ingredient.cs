@@ -23,30 +23,19 @@ namespace ForestGladeApp.Classess
             this.prize = prize;
         }
 
-        public Ingredient(string name, string unit, double prize, double proteinContent, double fatContent, double carbsContent) : this(name, unit, prize)
+        public Ingredient(string name, string unit, double prize, double calories, double proteinContent, double fatContent, double carbsContent) : this(name, unit, prize)
         {
-            nutriens = new Dictionary<string, double>(3);
+            nutriens = new Dictionary<string, double>(4);
+            nutriens.Add("calories", calories);
             nutriens.Add("proteins", proteinContent);
             nutriens.Add("fat", fatContent);
             nutriens.Add("carbohydrates", carbsContent);
         }
 
-        public Ingredient(string name, string unit, double prize, double proteinContent, double fatContent, double carbsContent, List<string> alergic):this(name,unit,prize,proteinContent,fatContent,carbsContent)
+        public Ingredient(string name, string unit, double prize, double calories, double proteinContent, double fatContent, double carbsContent, List<string> alergic):this(name,unit,prize, calories, proteinContent,fatContent,carbsContent)
         {
             if(alergic.Count!=0)
                 this.alergic = new List<string>(alergic);
-        }
-
-        public void AddToDb(MongoCRUD mongo)
-        {
-            try
-            {
-                mongo.InsertRecord("ingredients", this);
-            }
-            catch
-            {
-                System.Windows.Forms.MessageBox.Show("Składnik o takiej samej nazwie znaleziony w bazie.");
-            }
         }
 
         public void UpdateDB(MongoCRUD mongo)

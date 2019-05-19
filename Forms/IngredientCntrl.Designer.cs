@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tblLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.lblUnit = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtCount = new System.Windows.Forms.TextBox();
-            this.lblUnit = new System.Windows.Forms.Label();
             this.tblLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,19 @@
             this.tblLayout.TabIndex = 0;
             this.tblLayout.MouseEnter += new System.EventHandler(this.TblLayout_MouseEnter);
             this.tblLayout.MouseLeave += new System.EventHandler(this.TblLayout_MouseLeave);
+            // 
+            // lblUnit
+            // 
+            this.lblUnit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUnit.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblUnit.Location = new System.Drawing.Point(310, 23);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(87, 23);
+            this.lblUnit.TabIndex = 3;
+            this.lblUnit.Text = "Jednostka";
+            this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblName
             // 
@@ -78,20 +91,8 @@
             this.txtCount.Size = new System.Drawing.Size(94, 24);
             this.txtCount.TabIndex = 2;
             this.txtCount.Click += new System.EventHandler(this.TxtCount_Click);
-            this.txtCount.Leave += new System.EventHandler(this.TxtCount_Leave);
-            // 
-            // lblUnit
-            // 
-            this.lblUnit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUnit.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblUnit.Location = new System.Drawing.Point(310, 23);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(87, 23);
-            this.lblUnit.TabIndex = 3;
-            this.lblUnit.Text = "Jednostka";
-            this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtCount.MouseEnter += new System.EventHandler(this.TxtCount_MouseEnter);
+            this.txtCount.MouseLeave += new System.EventHandler(this.TxtCount_MouseLeave);
             // 
             // IngredientCntrl
             // 
