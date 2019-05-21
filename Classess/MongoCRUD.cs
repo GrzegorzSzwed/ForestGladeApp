@@ -47,15 +47,21 @@ namespace ForestGladeApp.Classess
         public void InsertRecord<T>(string table, T record)
         {
             var collection = db.GetCollection<T>(table);
-            collection.InsertOne(record);
+            try
+            {
+                collection.InsertOne(record);
+            }
+            catch(Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.ToString());
+            }
         }
 
         public List<T> LoadRecordsByCategory<T>(string table, string category)
         {
             var collection = db.GetCollection<T>(table);
 
-            var builder = Builders<T>.Filter;
-            var filter = builder.Eq("category", category);
+            var filter = "{ category : '" + category + "'}";
 
             return collection.Find(filter).ToList();
         }
@@ -70,7 +76,7 @@ namespace ForestGladeApp.Classess
         public T LoadRecordById<T>(string table, Guid id)
         {
             var collection = db.GetCollection<T>(table);
-            var filter = Builders<T>.Filter.Eq("id", id);
+            var filter = "{ id : '" + id + "'}";
 
             return collection.Find(filter).First();
         }
@@ -78,9 +84,10 @@ namespace ForestGladeApp.Classess
         public T LoadRecordByName<T>(string table, string name)
         {
             var collection = db.GetCollection<T>(table);
-            var filter = "{ name : '" + name + '}';
+            var filter = "{ name : '" + name + "'}";
 
             return collection.Find(filter).First();
         }
+
     }
 }

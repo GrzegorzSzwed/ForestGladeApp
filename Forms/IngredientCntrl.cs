@@ -20,7 +20,7 @@ namespace ForestGladeApp.Forms
             this.ingredient = ingredient;
             lblName.Text = this.ingredient.name;
             lblUnit.Text = this.ingredient.unit;
-            txtCount.Text = string.Empty;
+            txtCount.Text = Amount.ToString();
         }
         private double _amount;
         #region Properties

@@ -53,9 +53,9 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.flwIngredietns = new System.Windows.Forms.FlowLayoutPanel();
             this.flwMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnNewIngredient = new System.Windows.Forms.Button();
-            this.btnListIngredients = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnListIngredients = new System.Windows.Forms.Button();
+            this.btnNewIngredient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblMain.SuspendLayout();
@@ -65,9 +65,10 @@
             // 
             // txtName
             // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtName.Location = new System.Drawing.Point(220, 3);
+            this.txtName.Location = new System.Drawing.Point(220, 10);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(321, 20);
             this.txtName.TabIndex = 7;
@@ -121,10 +122,10 @@
             // 
             // txtPrize
             // 
+            this.txtPrize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPrize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrize.Location = new System.Drawing.Point(220, 260);
+            this.txtPrize.Location = new System.Drawing.Point(220, 267);
             this.txtPrize.Name = "txtPrize";
             this.txtPrize.Size = new System.Drawing.Size(321, 20);
             this.txtPrize.TabIndex = 11;
@@ -144,10 +145,10 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtAmount.Location = new System.Drawing.Point(220, 300);
+            this.txtAmount.Location = new System.Drawing.Point(220, 307);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(321, 20);
             this.txtAmount.TabIndex = 12;
@@ -167,10 +168,10 @@
             // 
             // txtDiscount
             // 
+            this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtDiscount.Location = new System.Drawing.Point(220, 340);
+            this.txtDiscount.Location = new System.Drawing.Point(220, 347);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(321, 20);
             this.txtDiscount.TabIndex = 13;
@@ -190,7 +191,7 @@
             // 
             // cmbUnit
             // 
-            this.cmbUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbUnit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cmbUnit.FormattingEnabled = true;
             this.cmbUnit.Items.AddRange(new object[] {
@@ -200,7 +201,7 @@
             "kilogram",
             "roboczogodzina",
             "godzina"});
-            this.cmbUnit.Location = new System.Drawing.Point(220, 220);
+            this.cmbUnit.Location = new System.Drawing.Point(220, 223);
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(321, 28);
             this.cmbUnit.TabIndex = 10;
@@ -245,7 +246,7 @@
             // 
             // cmbCategory
             // 
-            this.cmbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Items.AddRange(new object[] {
@@ -264,7 +265,7 @@
             "domki",
             "inne usługi gastronomiczne",
             "inne"});
-            this.cmbCategory.Location = new System.Drawing.Point(220, 43);
+            this.cmbCategory.Location = new System.Drawing.Point(220, 46);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(321, 28);
             this.cmbCategory.TabIndex = 8;
@@ -338,9 +339,10 @@
             this.listIngredients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listIngredients.FormattingEnabled = true;
             this.listIngredients.ItemHeight = 16;
-            this.listIngredients.Location = new System.Drawing.Point(220, 380);
+            this.listIngredients.Location = new System.Drawing.Point(217, 377);
+            this.listIngredients.Margin = new System.Windows.Forms.Padding(0);
             this.listIngredients.Name = "listIngredients";
-            this.listIngredients.Size = new System.Drawing.Size(321, 131);
+            this.listIngredients.Size = new System.Drawing.Size(327, 137);
             this.listIngredients.TabIndex = 21;
             // 
             // tblMain
@@ -398,20 +400,20 @@
             this.flwMenu.Size = new System.Drawing.Size(545, 50);
             this.flwMenu.TabIndex = 1;
             // 
-            // btnNewIngredient
+            // btnRefresh
             // 
-            this.btnNewIngredient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewIngredient.BackgroundImage")));
-            this.btnNewIngredient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNewIngredient.FlatAppearance.BorderSize = 0;
-            this.btnNewIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnNewIngredient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewIngredient.Location = new System.Drawing.Point(383, 3);
-            this.btnNewIngredient.Name = "btnNewIngredient";
-            this.btnNewIngredient.Size = new System.Drawing.Size(49, 44);
-            this.btnNewIngredient.TabIndex = 16;
-            this.btnNewIngredient.UseVisualStyleBackColor = true;
-            this.btnNewIngredient.Click += new System.EventHandler(this.BtnNewIngredient_Click);
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.Location = new System.Drawing.Point(493, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(49, 44);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnListIngredients
             // 
@@ -428,20 +430,20 @@
             this.btnListIngredients.UseVisualStyleBackColor = true;
             this.btnListIngredients.Click += new System.EventHandler(this.BtnListIngredients_Click);
             // 
-            // btnRefresh
+            // btnNewIngredient
             // 
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRefresh.Location = new System.Drawing.Point(493, 3);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(49, 44);
-            this.btnRefresh.TabIndex = 18;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            this.btnNewIngredient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewIngredient.BackgroundImage")));
+            this.btnNewIngredient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNewIngredient.FlatAppearance.BorderSize = 0;
+            this.btnNewIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNewIngredient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewIngredient.Location = new System.Drawing.Point(383, 3);
+            this.btnNewIngredient.Name = "btnNewIngredient";
+            this.btnNewIngredient.Size = new System.Drawing.Size(49, 44);
+            this.btnNewIngredient.TabIndex = 16;
+            this.btnNewIngredient.UseVisualStyleBackColor = true;
+            this.btnNewIngredient.Click += new System.EventHandler(this.BtnNewIngredient_Click);
             // 
             // ServiceCntrlMngmt
             // 

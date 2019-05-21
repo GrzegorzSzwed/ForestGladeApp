@@ -24,7 +24,7 @@ namespace ForestGladeApp.Classess
         public double amount { get; set; }
         public Image image { get; set; }
 
-        public Dictionary<Ingredient, double> ingredients;
+        public Dictionary<string, double> ingredients;
 
         public Service(string name, string category, string unit)
         {
@@ -33,19 +33,22 @@ namespace ForestGladeApp.Classess
             this.unit = unit;
         }
 
-        public Service(string name, string category, string unit, Dictionary<Ingredient,double> ingredients):this(name,category, unit)
+        public Service(string name, string category, string unit, Dictionary<string,double> ingredients):this(name,category, unit)
         {
-            this.ingredients = new Dictionary<Ingredient, double>(ingredients);
+            this.ingredients = new Dictionary<string, double>(ingredients);
         }
 
         public void CountCostOfIngredients()
         {
+            MongoCRUD mongo = new MongoCRUD("ForestGladeDB");
             if (ingredients!=null)
-            {
+            { 
                 double prize = 0;
                 foreach (var ing in ingredients)
                 {
-                    prize = prize + ing.Key.prize * ing.Value;
+                    Ingredient ingredient = mongo.LoadRecordByName<Ingredient>("ingredients", ing.Key);
+                    if(ingredient!=null)
+                        prize = prize + ingredient.prize * ing.Value;
                 }
                 if (prize >= 0)
                     costOfIngredients = prize;
@@ -54,9 +57,9 @@ namespace ForestGladeApp.Classess
             }
         }
 
-        public void SetIngredients(Dictionary<Ingredient,double> ingredients)
+        public void SetIngredients(Dictionary<string,double> ingredients)
         {
-            this.ingredients = new Dictionary<Ingredient, double>(ingredients);
+            this.ingredients = new Dictionary<string, double>(ingredients);
         }
     }
 }

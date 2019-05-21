@@ -13,13 +13,13 @@ namespace ForestGladeApp.Forms
 {
     public partial class ServiceCntrlMngmt : UserControl
     {
-        private Dictionary<Ingredient, double> _ingredients;
+        private Dictionary<string, double> _ingredients;
         private Service service;
         MongoCRUD mongo;
         public ServiceCntrlMngmt()
         {
             InitializeComponent();
-            _ingredients = new Dictionary<Ingredient, double>();
+            _ingredients = new Dictionary<string, double>();
             mongo = new MongoCRUD("ForestGladeDB");
         }
 
@@ -136,24 +136,24 @@ namespace ForestGladeApp.Forms
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
             _ingredients.Clear();
-            if(flwIngredietns.Controls.Count!=0)
+            if(flwIngredietns.Controls.Count>1)
             {
-                string[] names = new string[flwIngredietns.Controls.Count];
-                IngredientCntrl[] unboxed = new IngredientCntrl[flwIngredietns.Controls.Count];
-                var i = 0;
-                foreach (var cntrl in flwIngredietns.Controls)
-                {
-                    if (cntrl.GetType() == typeof(IngredientCntrl))
+                    string[] names = new string[flwIngredietns.Controls.Count];
+                    IngredientCntrl[] unboxed = new IngredientCntrl[flwIngredietns.Controls.Count];
+                    var i = 0;
+                    foreach (var cntrl in flwIngredietns.Controls)
                     {
-                        unboxed[i] = (IngredientCntrl)cntrl;
-                        if (unboxed[i].Amount != 0)
+                        if (cntrl.GetType() == typeof(IngredientCntrl))
                         {
-                            names[i] = unboxed[i].GetIngredient().name;
-                            _ingredients.Add(unboxed[i].GetIngredient(), unboxed[i++].Amount);
+                            unboxed[i] = (IngredientCntrl)cntrl;
+                            if (unboxed[i].Amount != 0)
+                            {
+                                names[i] = unboxed[i].GetIngredient().name;
+                                _ingredients.Add(unboxed[i].GetIngredient().name, unboxed[i++].Amount);
+                            }
                         }
                     }
-                }
-                listIngredients.DataSource = names;
+                    listIngredients.DataSource = names;
             }
         }
 
@@ -250,15 +250,22 @@ namespace ForestGladeApp.Forms
                     try
                     {
                         mongo.InsertRecord<Service>("services", service);
+                        ClearControls();
                     }
                     catch
                     {
                         MessageBox.Show("Usługa istnieje już w bazie, sprecyzuj nazwę lub zaktualizuj usługę");
                     }
                 }
+
             }
             else
                 MessageBox.Show("Nazwa, Kategoria i Jednostka potrzebne do stworzenia usługi");
+        }
+
+        private void ClearControls()
+        {
+            throw new NotImplementedException();
         }
         #endregion
 

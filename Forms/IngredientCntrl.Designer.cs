@@ -86,9 +86,9 @@
             this.txtCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCount.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtCount.Location = new System.Drawing.Point(403, 23);
+            this.txtCount.Location = new System.Drawing.Point(422, 23);
             this.txtCount.Name = "txtCount";
-            this.txtCount.Size = new System.Drawing.Size(94, 24);
+            this.txtCount.Size = new System.Drawing.Size(56, 24);
             this.txtCount.TabIndex = 2;
             this.txtCount.Click += new System.EventHandler(this.TxtCount_Click);
             this.txtCount.MouseEnter += new System.EventHandler(this.TxtCount_MouseEnter);

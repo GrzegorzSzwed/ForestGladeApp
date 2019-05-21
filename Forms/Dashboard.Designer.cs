@@ -74,8 +74,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cntrlListOrders = new ForestGladeApp.Forms.CntrlOrder();
             this.serviceCntrlMngmt1 = new ForestGladeApp.Forms.ServiceCntrlMngmt();
+            this.cntrlListOrders = new ForestGladeApp.Forms.CntrlOrder();
             this.tblDashboard.SuspendLayout();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
@@ -477,13 +477,13 @@
             // 
             // pnlBasement
             // 
-            this.pnlBasement.Controls.Add(this.pnlAddService);
-            this.pnlBasement.Controls.Add(this.pnlListEmployees);
-            this.pnlBasement.Controls.Add(this.pnlAddEmployee);
             this.pnlBasement.Controls.Add(this.pnlAddOrder);
             this.pnlBasement.Controls.Add(this.pnlListOrders);
             this.pnlBasement.Controls.Add(this.pnlListServices);
             this.pnlBasement.Controls.Add(this.pnlDefault);
+            this.pnlBasement.Controls.Add(this.pnlAddService);
+            this.pnlBasement.Controls.Add(this.pnlListEmployees);
+            this.pnlBasement.Controls.Add(this.pnlAddEmployee);
             this.pnlBasement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBasement.Location = new System.Drawing.Point(210, 0);
             this.pnlBasement.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -731,24 +731,31 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Zaloguj się";
             // 
-            // cntrlListOrders
-            // 
-            this.cntrlListOrders.BackColor = System.Drawing.Color.White;
-            this.cntrlListOrders.Location = new System.Drawing.Point(68, 23);
-            this.cntrlListOrders.Margin = new System.Windows.Forms.Padding(0);
-            this.cntrlListOrders.Name = "cntrlListOrders";
-            this.cntrlListOrders.Size = new System.Drawing.Size(911, 434);
-            this.cntrlListOrders.TabIndex = 0;
-            // 
             // serviceCntrlMngmt1
             // 
+            this.serviceCntrlMngmt1.AvailableAmount = 0D;
             this.serviceCntrlMngmt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.serviceCntrlMngmt1.Category = null;
+            this.serviceCntrlMngmt1.Description = null;
+            this.serviceCntrlMngmt1.Discount = 0D;
             this.serviceCntrlMngmt1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.serviceCntrlMngmt1.Location = new System.Drawing.Point(0, 0);
             this.serviceCntrlMngmt1.Margin = new System.Windows.Forms.Padding(0);
             this.serviceCntrlMngmt1.Name = "serviceCntrlMngmt1";
+            this.serviceCntrlMngmt1.Prize = 0D;
+            this.serviceCntrlMngmt1.ServiceName = null;
             this.serviceCntrlMngmt1.Size = new System.Drawing.Size(1096, 465);
             this.serviceCntrlMngmt1.TabIndex = 0;
+            this.serviceCntrlMngmt1.Unit = null;
+            // 
+            // cntrlListOrders
+            // 
+            this.cntrlListOrders.BackColor = System.Drawing.Color.White;
+            this.cntrlListOrders.Location = new System.Drawing.Point(68, 5);
+            this.cntrlListOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.cntrlListOrders.Name = "cntrlListOrders";
+            this.cntrlListOrders.Size = new System.Drawing.Size(982, 452);
+            this.cntrlListOrders.TabIndex = 0;
             // 
             // Dashboard
             // 

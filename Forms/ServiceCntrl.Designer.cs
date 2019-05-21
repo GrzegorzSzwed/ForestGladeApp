@@ -29,119 +29,76 @@
         private void InitializeComponent()
         {
             this.lblName = new System.Windows.Forms.Label();
-            this.pictureService = new System.Windows.Forms.PictureBox();
-            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
-            this.tblServiceControl = new System.Windows.Forms.TableLayoutPanel();
-            this.tblCntrlService02 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlInterrupt = new System.Windows.Forms.Panel();
-            this.cb = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureService)).BeginInit();
-            this.tblServiceControl.SuspendLayout();
-            this.tblCntrlService02.SuspendLayout();
+            this.tblLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.tblLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
             // 
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblName.Location = new System.Drawing.Point(15, 5);
-            this.lblName.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblName.Location = new System.Drawing.Point(69, 69);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(77, 25);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nazwa";
             // 
-            // pictureService
+            // tblLayout
             // 
-            this.pictureService.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureService.Location = new System.Drawing.Point(474, 3);
-            this.pictureService.Name = "pictureService";
-            this.pictureService.Size = new System.Drawing.Size(94, 111);
-            this.pictureService.TabIndex = 1;
-            this.pictureService.TabStop = false;
+            this.tblLayout.ColumnCount = 1;
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayout.Controls.Add(this.btnShow, 0, 2);
+            this.tblLayout.Controls.Add(this.lblCategory, 0, 1);
+            this.tblLayout.Controls.Add(this.lblName, 0, 0);
+            this.tblLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayout.Location = new System.Drawing.Point(0, 0);
+            this.tblLayout.Name = "tblLayout";
+            this.tblLayout.RowCount = 3;
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblLayout.Size = new System.Drawing.Size(216, 272);
+            this.tblLayout.TabIndex = 1;
+            this.tblLayout.MouseEnter += new System.EventHandler(this.TblLayout_MouseEnter);
+            this.tblLayout.MouseLeave += new System.EventHandler(this.TblLayout_MouseLeave);
             // 
-            // rtxtDescription
+            // lblCategory
             // 
-            this.rtxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxtDescription.Location = new System.Drawing.Point(3, 38);
-            this.rtxtDescription.Name = "rtxtDescription";
-            this.rtxtDescription.Size = new System.Drawing.Size(445, 76);
-            this.rtxtDescription.TabIndex = 2;
-            this.rtxtDescription.Text = "";
+            this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCategory.Location = new System.Drawing.Point(60, 177);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(96, 25);
+            this.lblCategory.TabIndex = 1;
+            this.lblCategory.Text = "Kategoria";
             // 
-            // tblServiceControl
+            // btnShow
             // 
-            this.tblServiceControl.ColumnCount = 4;
-            this.tblServiceControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblServiceControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblServiceControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tblServiceControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblServiceControl.Controls.Add(this.tblCntrlService02, 0, 0);
-            this.tblServiceControl.Controls.Add(this.pictureService, 2, 0);
-            this.tblServiceControl.Controls.Add(this.pnlInterrupt, 1, 0);
-            this.tblServiceControl.Controls.Add(this.cb, 3, 0);
-            this.tblServiceControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblServiceControl.Location = new System.Drawing.Point(0, 0);
-            this.tblServiceControl.Margin = new System.Windows.Forms.Padding(0);
-            this.tblServiceControl.Name = "tblServiceControl";
-            this.tblServiceControl.RowCount = 1;
-            this.tblServiceControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblServiceControl.Size = new System.Drawing.Size(611, 117);
-            this.tblServiceControl.TabIndex = 3;
-            // 
-            // tblCntrlService02
-            // 
-            this.tblCntrlService02.ColumnCount = 1;
-            this.tblCntrlService02.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblCntrlService02.Controls.Add(this.rtxtDescription, 0, 1);
-            this.tblCntrlService02.Controls.Add(this.lblName, 0, 0);
-            this.tblCntrlService02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblCntrlService02.Location = new System.Drawing.Point(0, 0);
-            this.tblCntrlService02.Margin = new System.Windows.Forms.Padding(0);
-            this.tblCntrlService02.Name = "tblCntrlService02";
-            this.tblCntrlService02.RowCount = 2;
-            this.tblCntrlService02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblCntrlService02.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblCntrlService02.Size = new System.Drawing.Size(451, 117);
-            this.tblCntrlService02.TabIndex = 0;
-            // 
-            // pnlInterrupt
-            // 
-            this.pnlInterrupt.BackColor = System.Drawing.Color.Teal;
-            this.pnlInterrupt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInterrupt.Location = new System.Drawing.Point(451, 0);
-            this.pnlInterrupt.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlInterrupt.Name = "pnlInterrupt";
-            this.pnlInterrupt.Size = new System.Drawing.Size(20, 117);
-            this.pnlInterrupt.TabIndex = 2;
-            // 
-            // cb
-            // 
-            this.cb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb.AutoSize = true;
-            this.cb.Location = new System.Drawing.Point(582, 50);
-            this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(18, 17);
-            this.cb.TabIndex = 3;
-            this.cb.UseVisualStyleBackColor = true;
-            this.cb.CheckedChanged += new System.EventHandler(this.Cb_CheckedChanged);
+            this.btnShow.BackColor = System.Drawing.Color.Teal;
+            this.btnShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShow.FlatAppearance.BorderSize = 0;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Location = new System.Drawing.Point(3, 220);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(210, 49);
+            this.btnShow.TabIndex = 2;
+            this.btnShow.UseVisualStyleBackColor = false;
             // 
             // ServiceCntrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tblServiceControl);
+            this.Controls.Add(this.tblLayout);
             this.Margin = new System.Windows.Forms.Padding(10, 5, 5, 20);
             this.Name = "ServiceCntrl";
-            this.Size = new System.Drawing.Size(611, 117);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureService)).EndInit();
-            this.tblServiceControl.ResumeLayout(false);
-            this.tblServiceControl.PerformLayout();
-            this.tblCntrlService02.ResumeLayout(false);
-            this.tblCntrlService02.PerformLayout();
+            this.Size = new System.Drawing.Size(216, 272);
+            this.tblLayout.ResumeLayout(false);
+            this.tblLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -149,11 +106,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox pictureService;
-        private System.Windows.Forms.RichTextBox rtxtDescription;
-        private System.Windows.Forms.TableLayoutPanel tblServiceControl;
-        private System.Windows.Forms.TableLayoutPanel tblCntrlService02;
-        private System.Windows.Forms.Panel pnlInterrupt;
-        private System.Windows.Forms.CheckBox cb;
+        private System.Windows.Forms.TableLayoutPanel tblLayout;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Label lblCategory;
     }
 }

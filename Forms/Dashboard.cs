@@ -179,7 +179,6 @@ namespace ForestGladeApp.Forms
             foreach (var s in services)
             {
                 var cntrl = new ServiceCntrl(s);
-                cntrl.Width = flwListServices.Width - 30;
                 flwListServices.Controls.Add(cntrl);
             }
 
@@ -248,11 +247,10 @@ namespace ForestGladeApp.Forms
             flwListServices.Controls.Clear();
 
             MongoCRUD mongo = new MongoCRUD("ForestGladeDB");
-            var services = mongo.LoadRecordsByCategory<Service>("services", "usługi weselne");
+            var services = mongo.LoadRecords<Service>("services");
             foreach (var s in services)
             {
                 var cntrl = new ServiceCntrl(s);
-                cntrl.Width = flwListServices.Width - 30;
                 flwListServices.Controls.Add(cntrl);
             }
         }

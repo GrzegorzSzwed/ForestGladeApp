@@ -20,14 +20,36 @@ namespace ForestGladeApp.Forms
             InitializeComponent();
             this.service = service;
 
-            lblName.Text = service.name;
-            rtxtDescription.Text = service.description;
-            pictureService.Image = service.image;
+            ServiceName = service.name;
+            Category = service.category;
         }
 
-        private void Cb_CheckedChanged(object sender, EventArgs e)
+        private string _name;
+        private string _category;
+
+        #region Properties
+        public string Category
         {
-            add = cb.Checked;
+            get { return _category; }
+            set { _category = value; lblCategory.Text = value; }
+        }
+
+        public string ServiceName
+        {
+            get { return _name; }
+            set { _name = value; lblName.Text = value; }
+        }
+        #endregion
+
+
+        private void TblLayout_MouseEnter(object sender, EventArgs e)
+        {
+            tblLayout.BackColor = Color.LightGray;
+        }
+
+        private void TblLayout_MouseLeave(object sender, EventArgs e)
+        {
+            tblLayout.BackColor = Color.White;
         }
     }
 }
